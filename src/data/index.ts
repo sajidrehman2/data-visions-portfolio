@@ -61,12 +61,12 @@ export const skills: Skill[] = [
 
 export const experiences: Experience[] = [
   {
-    title: "Senior AI Engineer",
-    company: "TechVision AI",
-    location: "San Francisco, CA",
-    duration: "Jan 2021 - Present",
-    description: "Leading the development of computer vision and NLP solutions for healthcare and retail clients. Architecting end-to-end machine learning pipelines and deploying models to production.",
-    technologies: ["PyTorch", "TensorFlow", "AWS", "Docker", "Kubernetes"],
+    title: "AI Engineer",
+    company: "Saylani Welfare Trust",
+    location: "Remote",
+    duration: "Jan 2023 - Apr 2024",
+    description: "Worked on developing machine learning models for natural language processing and computer vision tasks, including sentiment analysis, text classification, and image recognition. Improved model accuracy through advanced feature engineering and hyperparameter tuning. Collaborated with product and engineering teams to integrate AI solutions into existing systems, enhancing automation and functionality.",
+    technologies: ["Python", "Scikit-learn", "TensorFlow", "OpenCV", "NLTK"],
   },
   {
     title: "Data Scientist",
