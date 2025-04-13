@@ -265,12 +265,10 @@ export const personalInfo = {
   tagline: "Building Intelligent Systems with Data & AI",
   email: "contact@sajidrehman.ai",
   location: "San Francisco, CA",
-  bio: `I'm a passionate AI Engineer and Data Scientist with over 8 years of experience developing cutting-edge machine learning and deep learning solutions. My expertise spans computer vision, natural language processing, and predictive analytics, with a focus on creating AI systems that solve real-world problems.
+  bio: `I'm a passionate AI Engineer and Data Scientist with a growing track record in developing innovative machine learning and deep learning solutions. My work spans areas like computer vision, natural language processing, and predictive analytics, with a strong focus on building AI systems that address real-world challenges.
 
-With a Ph.D. in Computer Science from Stanford University, I combine strong theoretical foundations with practical experience implementing and deploying AI solutions at scale. I've led teams that developed award-winning AI products and have published research in top-tier conferences like NeurIPS and ICML.
+With a solid academic background and hands-on experience, I've contributed to projects involving data-driven decision-making, model deployment, and end-to-end AI pipelines. In just one year, I've had the opportunity to work on impactful projects and continuously sharpen my skills in both research and practical implementation.
 
-My approach to AI development is both rigorous and creative – I believe in building systems that are not only technically sound but also interpretable, ethical, and aligned with human values. I'm particularly interested in applications of AI in healthcare, sustainability, and education.
-
-When I'm not training neural networks, you can find me hiking in the mountains, playing the piano, or exploring the latest developments in quantum computing.`,
+I approach AI development with a blend of curiosity, creativity, and responsibility — aiming to build solutions that are not only effective but also ethical and interpretable. I'm especially passionate about using AI for positive impact in fields like healthcare, climate, and education. When I'm not working with data, I enjoy hiking, playing piano, and diving into the latest breakthroughs in tech and science.`,
   resumeUrl: "/resume.pdf"
 };
