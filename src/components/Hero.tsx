@@ -1,9 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { personalInfo } from '@/data';
 import { ChevronDown, Download } from 'lucide-react';
+
 const Hero = () => {
   const profileRef = useRef<HTMLDivElement>(null);
   const textContainerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const animationTimeout = setTimeout(() => {
       profileRef.current?.classList.add('opacity-100', 'translate-y-0');
@@ -11,14 +13,16 @@ const Hero = () => {
     }, 100);
     return () => clearTimeout(animationTimeout);
   }, []);
+
   const handleScrollDown = () => {
     const aboutSection = document.querySelector('#about');
     aboutSection?.scrollIntoView({
       behavior: 'smooth'
     });
   };
-  return <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
-      {/* Background effects */}
+
+  return (
+    <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
         <div className="absolute top-0 left-0 right-0 h-full bg-gradient-to-b from-accent/5 via-transparent to-background z-0"></div>
         <div className="absolute top-1/3 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full filter blur-[120px]"></div>
@@ -26,7 +30,6 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto relative z-10 pt-24 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16">
-        {/* Left column: Profile image */}
         <div ref={profileRef} className="w-full lg:w-1/3 flex justify-center opacity-0 translate-y-8 transition-all duration-700">
           <div className="relative">
             <div className="w-60 h-60 md:w-72 md:h-72 rounded-full border-2 border-white/10 overflow-hidden glass-panel">
@@ -39,7 +42,6 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Right column: Text content */}
         <div ref={textContainerRef} className="w-full lg:w-1/2 text-center lg:text-left opacity-0 transition-opacity duration-1000 delay-300">
           <div className="overflow-hidden">
             <p className="inline-block text-sm md:text-base font-mono text-primary mb-2 opacity-0 animate-text-reveal animate-delay-300">
@@ -78,11 +80,12 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll down indicator */}
       <button onClick={handleScrollDown} className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center opacity-0 animate-fade-in animate-delay-800" aria-label="Scroll down">
         <span className="text-sm text-foreground/60 mb-2">Scroll Down</span>
         <ChevronDown className="animate-bounce" size={20} />
       </button>
-    </section>;
+    </section>
+  );
 };
+
 export default Hero;

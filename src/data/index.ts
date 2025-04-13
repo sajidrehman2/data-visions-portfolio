@@ -1,4 +1,3 @@
-
 import { 
   NavItem, 
   Skill, 
@@ -261,10 +260,10 @@ export const testimonials: Testimonial[] = [
 ];
 
 export const personalInfo = {
-  name: "Alex Morgan",
+  name: "Sajid Rehman",
   title: "AI Engineer & Data Scientist",
   tagline: "Building Intelligent Systems with Data & AI",
-  email: "contact@alexmorgan.ai",
+  email: "contact@sajidrehman.ai",
   location: "San Francisco, CA",
   bio: `I'm a passionate AI Engineer and Data Scientist with over 8 years of experience developing cutting-edge machine learning and deep learning solutions. My expertise spans computer vision, natural language processing, and predictive analytics, with a focus on creating AI systems that solve real-world problems.
 
