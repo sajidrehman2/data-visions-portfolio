@@ -39,9 +39,9 @@ const Header = () => {
         <a 
           href="#home" 
           className="text-xl font-bold tracking-tight text-gradient"
-          aria-label="Alex Morgan - AI Engineer & Data Scientist"
+          aria-label="Sajid Rehman - AI Engineer & Data Scientist"
         >
-          Alex<span className="text-white">Morgan</span>
+          Sajid<span className="text-white">Rehman</span>
         </a>
 
         {/* Desktop Navigation */}
