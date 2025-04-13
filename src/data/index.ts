@@ -1,3 +1,4 @@
+
 import { 
   NavItem, 
   Skill, 
@@ -67,6 +68,14 @@ export const experiences: Experience[] = [
     duration: "Jan 2023 - Apr 2024",
     description: "Worked on developing machine learning models for natural language processing and computer vision tasks, including sentiment analysis, text classification, and image recognition. Improved model accuracy through advanced feature engineering and hyperparameter tuning. Collaborated with product and engineering teams to integrate AI solutions into existing systems, enhancing automation and functionality.",
     technologies: ["Python", "Scikit-learn", "TensorFlow", "OpenCV", "NLTK"],
+  },
+  {
+    title: "AI Engineer",
+    company: "Code Alpha",
+    location: "Peshawar, Pakistan",
+    duration: "Jan 2025 - Present",
+    description: "Assisting in the development and optimization of AI/ML models for real-world applications. Working with large-scale datasets for training and evaluation, and implementing deep learning and NLP techniques to support various AI solutions. Collaborating closely with the data science team to improve model performance and ensure accurate results. Responsible for documenting research findings and regularly presenting progress to stakeholders.",
+    technologies: ["Python", "PyTorch", "TensorFlow", "Pandas", "Hugging Face Transformers"],
   },
   {
     title: "Data Scientist",
