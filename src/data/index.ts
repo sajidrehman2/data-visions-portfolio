@@ -57,6 +57,14 @@ export const skills: Skill[] = [
   { name: "Spark", level: 85, category: "Big Data" },
   { name: "Hadoop", level: 75, category: "Big Data" },
   { name: "Kafka", level: 70, category: "Big Data" },
+
+  // New Machine Learning skills
+  { name: "Natural Language Processing", level: 85, category: "Machine Learning" },
+  { name: "Deep Learning", level: 90, category: "Machine Learning" },
+  { name: "Neural Networks", level: 85, category: "Machine Learning" },
+  { name: "Data Analysis", level: 88, category: "Machine Learning" },
+  { name: "TensorFlow", level: 92, category: "Machine Learning" },
+  { name: "Python", level: 95, category: "Machine Learning" },
 ];
 
 export const experiences: Experience[] = [
