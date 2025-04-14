@@ -96,23 +96,25 @@ export const experiences: Experience[] = [
 
 export const education: Education[] = [
   {
-    degree: "Ph.D. in Computer Science (Machine Learning Focus)",
-    institution: "Stanford University",
-    location: "Stanford, CA",
-    duration: "2012 - 2016",
-    description: "Dissertation on 'Deep Learning Approaches for Multi-modal Data Integration in Healthcare'",
+    degree: "B.S. in Information Technology",
+    institution: "The University of Agriculture, Peshawar",
+    location: "Peshawar, Pakistan",
+    duration: "Nov 2022 – Present",
+    description: "Currently pursuing a bachelor's degree with a focus on programming, data science, machine learning, and software development. Coursework includes hands-on projects, data analysis, cloud computing, and software engineering, preparing for a dynamic career in the tech industry.",
   },
   {
-    degree: "M.S. in Data Science",
-    institution: "Massachusetts Institute of Technology",
-    location: "Cambridge, MA",
-    duration: "2010 - 2012",
+    degree: "Diploma in Information Technology",
+    institution: "National College of Management Sciences",
+    location: "Pakistan",
+    duration: "Jan 2023 – Jan 2024",
+    description: "Completed a comprehensive diploma program covering programming, networking, databases, and system administration. Gained a strong technical foundation and practical skills to support further academic and professional growth in IT and AI-related fields.",
   },
   {
-    degree: "B.S. in Computer Science and Mathematics",
-    institution: "University of California, Berkeley",
-    location: "Berkeley, CA",
-    duration: "2006 - 2010",
+    degree: "Secondary Education",
+    institution: "Paradise Children Academy, Sarozai Hangu",
+    location: "Hangu, Pakistan",
+    duration: "",
+    description: "Completed foundational studies, including mathematics, science, and computer studies, establishing a solid academic base for future education in technology and engineering.",
   },
 ];
 
