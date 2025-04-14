@@ -58,6 +58,11 @@ export const skills: Skill[] = [
   { name: "Hadoop", level: 75, category: "Big Data" },
   { name: "Kafka", level: 70, category: "Big Data" },
 
+  // Updated Machine Learning skills
+  { name: "Python", level: 95, category: "Machine Learning" },
+  { name: "Deep Learning", level: 90, category: "Machine Learning" },
+  { name: "Data Analysis", level: 88, category: "Machine Learning" },
+  
   // New Machine Learning skills
   { name: "Natural Language Processing", level: 85, category: "Machine Learning" },
   { name: "Deep Learning", level: 90, category: "Machine Learning" },
