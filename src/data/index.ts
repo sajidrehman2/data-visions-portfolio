@@ -85,12 +85,12 @@ export const experiences: Experience[] = [
     technologies: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
   },
   {
-    title: "Machine Learning Engineer",
-    company: "NextGen Solutions",
-    location: "Seattle, WA",
-    duration: "Jun 2016 - Feb 2018",
-    description: "Built recommendation engines and sentiment analysis tools. Optimized algorithms for performance and scalability resulting in 45% faster inference times.",
-    technologies: ["Python", "TensorFlow", "Keras", "MongoDB", "Flask"],
+    title: "Machine Learning & Deep Learning Projects – Independent Work",
+    company: "Remote / Online",
+    location: "Remote",
+    duration: "2024 – Present",
+    description: "Working on a variety of machine learning and deep learning projects to strengthen practical skills in real-world applications. Projects span areas like natural language processing, computer vision, and predictive analytics. Focused on building, training, and evaluating models using industry-standard tools and frameworks. Sharing completed work, code, and insights on GitHub and LinkedIn to engage with the AI community and showcase technical growth.",
+    technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Hugging Face", "Jupyter Notebooks"],
   },
 ];
 
