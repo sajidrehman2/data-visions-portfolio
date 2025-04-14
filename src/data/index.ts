@@ -1,4 +1,3 @@
-
 import { 
   NavItem, 
   Skill, 
@@ -78,12 +77,12 @@ export const experiences: Experience[] = [
     technologies: ["Python", "PyTorch", "TensorFlow", "Pandas", "Hugging Face Transformers"],
   },
   {
-    title: "Data Scientist",
-    company: "DataMind Analytics",
-    location: "Boston, MA",
-    duration: "Mar 2018 - Dec 2020",
-    description: "Developed predictive models for financial services clients. Engineered features from large datasets and implemented ML algorithms that improved prediction accuracy by 35%.",
-    technologies: ["Python", "Scikit-Learn", "SQL", "Tableau", "R"],
+    title: "Python for Data Science and AI – Trainee",
+    company: "Saylani Trust (SMIT)",
+    location: "Peshawar, Pakistan",
+    duration: "Jan 2024 – Present",
+    description: "Currently enhancing skills in Python programming for data science and artificial intelligence. Gaining hands-on experience in data manipulation, visualization, machine learning, and AI techniques. Working on practical projects to apply theoretical knowledge in solving real-world problems using Python.",
+    technologies: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
   },
   {
     title: "Machine Learning Engineer",
