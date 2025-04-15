@@ -134,35 +134,28 @@ export const education: Education[] = [
 export const certifications: Certification[] = [
   {
     name: "Machine Learning Specialization",
-    issuer: "Coursera",
-    date: "2024",
-    url: "https://www.coursera.org/specializations/machine-learning",
+    issuer: "Stanford University & DeepLearning.AI",
+    date: "Jan 2025",
+    url: "https://coursera.org/verify/specialization/NJPZ2R20FCSA"
   },
   {
-    name: "Deep Learning",
-    issuer: "Coursera",
-    date: "2024",
+    name: "Deep Learning Specialization",
+    issuer: "DeepLearning.AI",
+    date: "Feb 2025",
+    url: "https://coursera.org/verify/specialization/CWU4WHN4M9B"
   },
   {
-    name: "Python for Data Science and AI",
-    issuer: "Saylani Welfare Trust (SMIT)",
-    date: "2024",
+    name: "Data Analytics and Business Intelligence",
+    issuer: "DigiSkills.pk",
+    date: "Feb 2024",
+    url: "https://digiskills.pk/verify"
   },
   {
-    name: "AI Python for Beginners: Basics of AI Python Coding",
-    issuer: "DeepLearning.AI (Andrew Ng)",
+    name: "AI Python for Beginners",
+    issuer: "DeepLearning.AI",
     date: "2023",
-  },
-  {
-    name: "AI Python for Beginners: Working with Your Own Data and Documents in Python",
-    issuer: "DeepLearning.AI (Andrew Ng)",
-    date: "2023",
-  },
-  {
-    name: "AI Python for Beginners: Automating Tasks with Python",
-    issuer: "DeepLearning.AI (Andrew Ng)",
-    date: "2023",
-  },
+    url: "https://www.deeplearning.ai/courses/ai-python-for-beginners/"
+  }
 ];
 
 export const projectCategories: ProjectCategory[] = [
