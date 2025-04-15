@@ -133,28 +133,35 @@ export const education: Education[] = [
 
 export const certifications: Certification[] = [
   {
-    name: "TensorFlow Developer Certificate",
-    issuer: "Google",
-    date: "2022",
-    url: "https://www.tensorflow.org/certificate",
+    name: "Machine Learning Specialization",
+    issuer: "Coursera",
+    date: "2024",
+    url: "https://www.coursera.org/specializations/machine-learning",
   },
   {
-    name: "AWS Certified Machine Learning – Specialty",
-    issuer: "Amazon Web Services",
-    date: "2021",
-    url: "https://aws.amazon.com/certification/certified-machine-learning-specialty/",
+    name: "Deep Learning",
+    issuer: "Coursera",
+    date: "2024",
   },
   {
-    name: "Deep Learning Specialization",
-    issuer: "Coursera (deeplearning.ai)",
-    date: "2020",
-    url: "https://www.coursera.org/specializations/deep-learning",
+    name: "Python for Data Science and AI",
+    issuer: "Saylani Welfare Trust (SMIT)",
+    date: "2024",
   },
   {
-    name: "Professional Data Engineer",
-    issuer: "Google Cloud",
-    date: "2019",
-    url: "https://cloud.google.com/certification/data-engineer",
+    name: "AI Python for Beginners: Basics of AI Python Coding",
+    issuer: "DeepLearning.AI (Andrew Ng)",
+    date: "2023",
+  },
+  {
+    name: "AI Python for Beginners: Working with Your Own Data and Documents in Python",
+    issuer: "DeepLearning.AI (Andrew Ng)",
+    date: "2023",
+  },
+  {
+    name: "AI Python for Beginners: Automating Tasks with Python",
+    issuer: "DeepLearning.AI (Andrew Ng)",
+    date: "2023",
   },
 ];
 
