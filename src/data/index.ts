@@ -286,8 +286,9 @@ export const personalInfo = {
   name: "Sajid Rehman",
   title: "AI Engineer & Data Scientist",
   tagline: "Building Intelligent Systems with Data & AI",
-  email: "contact@sajidrehman.ai",
-  location: "San Francisco, CA",
+  email: "sajid.rehmanoffical95001@gmail.com",
+  phone: "+923038047795",
+  location: "Peshawar, Pakistan, 25000",
   bio: `I'm a passionate AI Engineer and Data Scientist with a growing track record in developing innovative machine learning and deep learning solutions. My work spans areas like computer vision, natural language processing, and predictive analytics, with a strong focus on building AI systems that address real-world challenges.
 
 With a solid academic background and hands-on experience, I've contributed to projects involving data-driven decision-making, model deployment, and end-to-end AI pipelines. In just one year, I've had the opportunity to work on impactful projects and continuously sharpen my skills in both research and practical implementation.
