@@ -233,28 +233,28 @@ export const projects: Project[] = [
 export const socialLinks: SocialLink[] = [
   {
     name: "GitHub",
-    url: "https://github.com/username",
+    url: "https://github.com/sajidrehman2",
     icon: "github",
   },
   {
     name: "LinkedIn",
-    url: "https://linkedin.com/in/username",
+    url: "https://www.linkedin.com/in/sajid-rehman-b14474265/",
     icon: "linkedin",
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/username",
+    url: "https://x.com/SajidRe89262888",
     icon: "twitter",
+  },
+  {
+    name: "Kaggle",
+    url: "https://www.kaggle.com/itsajidrehman",
+    icon: "bar-chart",
   },
   {
     name: "Medium",
     url: "https://medium.com/@username",
     icon: "feather",
-  },
-  {
-    name: "Kaggle",
-    url: "https://kaggle.com/username",
-    icon: "bar-chart",
   },
 ];
 
