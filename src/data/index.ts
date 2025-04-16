@@ -18,117 +18,85 @@ export const navItems: NavItem[] = [
   { name: "Contact", href: "#contact" },
 ];
 
-export const skills: Skill[] = [
-  // Programming Languages
-  { name: "Python", level: 95, category: "Programming Languages" },
-  { name: "R", level: 85, category: "Programming Languages" },
-  { name: "SQL", level: 90, category: "Programming Languages" },
-  { name: "JavaScript", level: 75, category: "Programming Languages" },
-  
-  // Machine Learning
-  { name: "Scikit-Learn", level: 90, category: "Machine Learning" },
-  { name: "XGBoost", level: 85, category: "Machine Learning" },
-  { name: "Random Forest", level: 90, category: "Machine Learning" },
-  { name: "SVM", level: 80, category: "Machine Learning" },
-  
-  // Deep Learning
-  { name: "TensorFlow", level: 92, category: "Deep Learning" },
-  { name: "PyTorch", level: 88, category: "Deep Learning" },
-  { name: "Keras", level: 90, category: "Deep Learning" },
-  { name: "CNNs", level: 88, category: "Deep Learning" },
-  { name: "RNNs/LSTMs", level: 85, category: "Deep Learning" },
-  { name: "Transformers", level: 82, category: "Deep Learning" },
-  
-  // Data Science
-  { name: "Pandas", level: 95, category: "Data Science" },
-  { name: "NumPy", level: 95, category: "Data Science" },
-  { name: "Matplotlib", level: 90, category: "Data Science" },
-  { name: "Seaborn", level: 88, category: "Data Science" },
-  { name: "Jupyter", level: 95, category: "Data Science" },
-  
-  // Cloud & DevOps
-  { name: "AWS", level: 85, category: "Cloud & DevOps" },
-  { name: "GCP", level: 80, category: "Cloud & DevOps" },
-  { name: "Docker", level: 85, category: "Cloud & DevOps" },
-  { name: "Kubernetes", level: 75, category: "Cloud & DevOps" },
-  { name: "CI/CD", level: 80, category: "Cloud & DevOps" },
-  
-  // Big Data
-  { name: "Spark", level: 85, category: "Big Data" },
-  { name: "Hadoop", level: 75, category: "Big Data" },
-  { name: "Kafka", level: 70, category: "Big Data" },
-
-  // Updated Machine Learning skills
-  { name: "Python", level: 95, category: "Machine Learning" },
-  { name: "Deep Learning", level: 90, category: "Machine Learning" },
-  { name: "Data Analysis", level: 88, category: "Machine Learning" },
-  
-  // New Machine Learning skills
-  { name: "Natural Language Processing", level: 85, category: "Machine Learning" },
-  { name: "Deep Learning", level: 90, category: "Machine Learning" },
-  { name: "Neural Networks", level: 85, category: "Machine Learning" },
-  { name: "Data Analysis", level: 88, category: "Machine Learning" },
-  { name: "TensorFlow", level: 92, category: "Machine Learning" },
-  { name: "Python", level: 95, category: "Machine Learning" },
+export const education: Education[] = [
+  {
+    degree: "B.S. in Information Technology",
+    institution: "The University of Agriculture, Peshawar",
+    location: "Peshawar, Pakistan",
+    duration: "Nov 2022 - Present",
+    description: "Currently pursuing a bachelor's degree in Information Technology with focus on programming and software development.",
+  },
+  {
+    degree: "Diploma in Information Technology",
+    institution: "National College of Management Science",
+    location: "Peshawar, Pakistan",
+    duration: "Jan 2023 - Jan 2024",
+    description: "Completed diploma program covering core IT concepts and technologies."
+  },
+  {
+    degree: "Python for Data Science and AI Training",
+    institution: "Saylani Trust SMIT",
+    location: "Peshawar, Pakistan",
+    duration: "Jan 2024 - Present",
+    description: "Specialized training in Python programming for data science and artificial intelligence applications."
+  }
 ];
 
 export const experiences: Experience[] = [
   {
     title: "AI Engineer",
     company: "Saylani Welfare Trust",
-    location: "Remote",
-    duration: "Jan 2023 - Apr 2024",
-    description: "Worked on developing machine learning models for natural language processing and computer vision tasks, including sentiment analysis, text classification, and image recognition. Improved model accuracy through advanced feature engineering and hyperparameter tuning. Collaborated with product and engineering teams to integrate AI solutions into existing systems, enhancing automation and functionality.",
-    technologies: ["Python", "Scikit-learn", "TensorFlow", "OpenCV", "NLTK"],
+    location: "Peshawar, Pakistan",
+    duration: "Jan 2023 - Aug 2024",
+    description: "Designed and implemented machine learning algorithms for NLP tasks, enhancing text analysis and automation. Developed AI models for image recognition and object detection. Collaborated with cross-functional teams to integrate AI solutions into existing products.",
+    technologies: ["Python", "TensorFlow", "PyTorch", "OpenCV", "NLP"],
   },
   {
-    title: "AI Engineer",
+    title: "Data Science",
     company: "Code Alpha",
     location: "Peshawar, Pakistan",
-    duration: "Jan 2025 - Present",
-    description: "Assisting in the development and optimization of AI/ML models for real-world applications. Working with large-scale datasets for training and evaluation, and implementing deep learning and NLP techniques to support various AI solutions. Collaborating closely with the data science team to improve model performance and ensure accurate results. Responsible for documenting research findings and regularly presenting progress to stakeholders.",
-    technologies: ["Python", "PyTorch", "TensorFlow", "Pandas", "Hugging Face Transformers"],
+    duration: "Jan 2024 - Aug 2024",
+    description: "Assisted in the development and optimization of AI/ML models for real-world applications. Worked with large-scale datasets for training and evaluation. Collaborated with data science team to improve model performance and documented research findings.",
+    technologies: ["Python", "Machine Learning", "Deep Learning", "NLP", "Data Analysis"],
   },
   {
     title: "Python for Data Science and AI – Trainee",
     company: "Saylani Trust (SMIT)",
     location: "Peshawar, Pakistan",
-    duration: "Jan 2024 – Present",
-    description: "Currently enhancing skills in Python programming for data science and artificial intelligence. Gaining hands-on experience in data manipulation, visualization, machine learning, and AI techniques. Working on practical projects to apply theoretical knowledge in solving real-world problems using Python.",
-    technologies: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
-  },
-  {
-    title: "Machine Learning & Deep Learning Projects – Independent Work",
-    company: "Remote / Online",
-    location: "Remote",
-    duration: "2024 – Present",
-    description: "Working on a variety of machine learning and deep learning projects to strengthen practical skills in real-world applications. Projects span areas like natural language processing, computer vision, and predictive analytics. Focused on building, training, and evaluating models using industry-standard tools and frameworks. Sharing completed work, code, and insights on GitHub and LinkedIn to engage with the AI community and showcase technical growth.",
-    technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV", "Hugging Face", "Jupyter Notebooks"],
-  },
+    duration: "Jan 2023 - Jan 2025",
+    description: "Enhanced skills in Python programming for data science and AI. Gained hands-on experience in data manipulation, visualization, and machine learning techniques. Worked on practical projects applying theoretical knowledge to real-world problems.",
+    technologies: ["Python", "Data Science", "Machine Learning", "AI", "Data Visualization"],
+  }
 ];
 
-export const education: Education[] = [
-  {
-    degree: "B.S. in Information Technology",
-    institution: "The University of Agriculture, Peshawar",
-    location: "Peshawar, Pakistan",
-    duration: "Nov 2022 – Present",
-    description: "Currently pursuing a bachelor's degree with a focus on programming, data science, machine learning, and software development. Coursework includes hands-on projects, data analysis, cloud computing, and software engineering, preparing for a dynamic career in the tech industry.",
-  },
-  {
-    degree: "Diploma in Information Technology",
-    institution: "National College of Management Sciences",
-    location: "Pakistan",
-    duration: "Jan 2023 – Jan 2024",
-    description: "Completed a comprehensive diploma program covering programming, networking, databases, and system administration. Gained a strong technical foundation and practical skills to support further academic and professional growth in IT and AI-related fields.",
-  },
-  {
-    degree: "Secondary Education",
-    institution: "Paradise Children Academy, Sarozai Hangu",
-    location: "Hangu, Pakistan",
-    duration: "",
-    description: "Completed foundational studies, including mathematics, science, and computer studies, establishing a solid academic base for future education in technology and engineering.",
-  },
+export const skills: Skill[] = [
+  // Programming Languages
+  { name: "Python", level: 95, category: "Programming Languages" },
+  { name: "SQL", level: 90, category: "Programming Languages" },
+  { name: "HTML/CSS", level: 85, category: "Programming Languages" },
+  { name: "PHP", level: 80, category: "Programming Languages" },
+  
+  // Frameworks & Tools
+  { name: "TensorFlow", level: 92, category: "Machine Learning" },
+  { name: "PyTorch", level: 88, category: "Machine Learning" },
+  { name: "Keras", level: 90, category: "Machine Learning" },
+  { name: "Scikit-learn", level: 90, category: "Machine Learning" },
+  { name: "FastAI", level: 85, category: "Machine Learning" },
+  
+  // Development Tools
+  { name: "Jupyter Notebook", level: 95, category: "Data Science" },
+  { name: "Git", level: 88, category: "Cloud & DevOps" },
+  { name: "Docker", level: 85, category: "Cloud & DevOps" },
+  { name: "VS Code", level: 90, category: "Programming Languages" },
+  
+  // Libraries
+  { name: "NumPy", level: 92, category: "Data Science" },
+  { name: "Pandas", level: 95, category: "Data Science" },
+  { name: "Matplotlib", level: 90, category: "Data Science" },
+  { name: "Seaborn", level: 88, category: "Data Science" },
+  { name: "NLTK", level: 85, category: "Machine Learning" },
+  { name: "OpenCV", level: 88, category: "Machine Learning" },
+  { name: "Transformers", level: 85, category: "Machine Learning" }
 ];
 
 export const certifications: Certification[] = [
