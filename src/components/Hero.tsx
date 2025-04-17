@@ -1,3 +1,4 @@
+
 import { useEffect, useRef } from 'react';
 import { personalInfo } from '@/data';
 import { ChevronDown, Download } from 'lucide-react';
@@ -72,7 +73,13 @@ const Hero = () => {
               Get in Touch
             </a>
             
-            <a href={personalInfo.resumeUrl} className="px-6 py-3 border border-white/10 bg-secondary hover:bg-secondary/80 text-foreground rounded-md font-medium transition-all flex items-center gap-2" download>
+            <a 
+              href="https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf" 
+              className="px-6 py-3 border border-white/10 bg-secondary hover:bg-secondary/80 text-foreground rounded-md font-medium transition-all flex items-center gap-2" 
+              download="Sajid_Rehman_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <Download size={18} />
               Download CV
             </a>

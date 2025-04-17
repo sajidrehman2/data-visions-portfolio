@@ -2,7 +2,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Download } from "lucide-react";
 
 const NotFound = () => {
   const location = useLocation();
@@ -16,12 +16,16 @@ const NotFound = () => {
     
     // If trying to access resume.pdf, show a specific message in console
     if (location.pathname === "/resume.pdf") {
-      console.error("Resume file not found in public directory");
+      console.error("Resume file not found in public directory - redirecting to download URL");
     }
   }, [location.pathname]);
 
   const handleNavigateHome = () => {
     navigate("/");
+  };
+
+  const handleResumeDownload = () => {
+    window.open("https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf", "_blank");
   };
 
   return (
@@ -31,16 +35,29 @@ const NotFound = () => {
         <p className="text-2xl font-medium text-foreground mb-4">Oops! Page not found</p>
         <p className="text-muted-foreground mb-8">
           {location.pathname === "/resume.pdf" 
-            ? "The resume file you're looking for is not available at this moment." 
+            ? "The resume file you're looking for is available for direct download below." 
             : "The page you're looking for doesn't exist or has been moved."}
         </p>
-        <Button 
-          onClick={handleNavigateHome} 
-          className="inline-flex items-center gap-2"
-          size="lg"
-        >
-          <ArrowLeft size={18} /> Return to Home
-        </Button>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button 
+            onClick={handleNavigateHome} 
+            className="inline-flex items-center gap-2"
+            size="lg"
+          >
+            <ArrowLeft size={18} /> Return to Home
+          </Button>
+          
+          {location.pathname === "/resume.pdf" && (
+            <Button 
+              onClick={handleResumeDownload} 
+              className="inline-flex items-center gap-2"
+              size="lg"
+              variant="outline"
+            >
+              <Download size={18} /> Download Resume
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );

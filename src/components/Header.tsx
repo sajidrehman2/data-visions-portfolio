@@ -63,6 +63,7 @@ const Header = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium px-4 py-2 rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
+                download="Sajid_Rehman_Resume.pdf"
               >
                 Resume
               </a>
@@ -103,6 +104,7 @@ const Header = () => {
             rel="noopener noreferrer"
             className="text-xl font-medium mt-4 px-6 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             onClick={handleNavItemClick}
+            download="Sajid_Rehman_Resume.pdf"
           >
             Resume
           </a>
