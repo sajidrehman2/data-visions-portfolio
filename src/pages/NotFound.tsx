@@ -25,7 +25,12 @@ const NotFound = () => {
   };
 
   const handleResumeDownload = () => {
-    window.open("https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf", "_blank");
+    const link = document.createElement('a');
+    link.href = "https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf";
+    link.setAttribute('download', 'Sajid_Rehman_Resume.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (

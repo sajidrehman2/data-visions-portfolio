@@ -60,10 +60,16 @@ const Header = () => {
             <li>
               <a
                 href="https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="text-sm font-medium px-4 py-2 rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors"
-                download="Sajid_Rehman_Resume.pdf"
+                onClick={(e) => {
+                  e.preventDefault();
+                  const link = document.createElement('a');
+                  link.href = "https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf";
+                  link.setAttribute('download', 'Sajid_Rehman_Resume.pdf');
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
                 Resume
               </a>
@@ -100,11 +106,17 @@ const Header = () => {
           ))}
           <a
             href="https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
             className="text-xl font-medium mt-4 px-6 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
-            onClick={handleNavItemClick}
-            download="Sajid_Rehman_Resume.pdf"
+            onClick={(e) => {
+              e.preventDefault();
+              handleNavItemClick();
+              const link = document.createElement('a');
+              link.href = "https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf";
+              link.setAttribute('download', 'Sajid_Rehman_Resume.pdf');
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
           >
             Resume
           </a>

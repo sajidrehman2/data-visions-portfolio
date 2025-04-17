@@ -22,6 +22,16 @@ const Hero = () => {
     });
   };
 
+  const handleResumeDownload = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const link = document.createElement('a');
+    link.href = "https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf";
+    link.setAttribute('download', 'Sajid_Rehman_Resume.pdf');
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="relative min-h-screen flex flex-col items-center justify-center px-6 overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
@@ -76,9 +86,7 @@ const Hero = () => {
             <a 
               href="https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf" 
               className="px-6 py-3 border border-white/10 bg-secondary hover:bg-secondary/80 text-foreground rounded-md font-medium transition-all flex items-center gap-2" 
-              download="Sajid_Rehman_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              onClick={handleResumeDownload}
             >
               <Download size={18} />
               Download CV
