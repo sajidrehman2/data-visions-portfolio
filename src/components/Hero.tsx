@@ -2,6 +2,7 @@
 import { useEffect, useRef } from 'react';
 import { personalInfo } from '@/data';
 import { ChevronDown, Download } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast";
 
 const Hero = () => {
   const profileRef = useRef<HTMLDivElement>(null);
@@ -24,12 +25,45 @@ const Hero = () => {
 
   const handleResumeDownload = (e: React.MouseEvent) => {
     e.preventDefault();
-    const link = document.createElement('a');
-    link.href = "https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf";
-    link.setAttribute('download', 'Sajid_Rehman_Resume.pdf');
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    try {
+      const resumeUrl = "https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf";
+      fetch(resumeUrl)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.blob();
+        })
+        .then(blob => {
+          const url = window.URL.createObjectURL(blob);
+          const link = document.createElement('a');
+          link.href = url;
+          link.setAttribute('download', 'Sajid_Rehman_Resume.pdf');
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          window.URL.revokeObjectURL(url);
+          toast({
+            title: "Resume download started",
+            description: "Your resume download has been initiated.",
+          });
+        })
+        .catch(error => {
+          console.error('Download failed:', error);
+          toast({
+            title: "Download failed",
+            description: "Unable to download the resume. Please try again later.",
+            variant: "destructive",
+          });
+        });
+    } catch (error) {
+      console.error('Error initiating download:', error);
+      toast({
+        title: "Download error",
+        description: "There was a problem with your download request.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -84,7 +118,7 @@ const Hero = () => {
             </a>
             
             <a 
-              href="https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf" 
+              href="#" 
               className="px-6 py-3 border border-white/10 bg-secondary hover:bg-secondary/80 text-foreground rounded-md font-medium transition-all flex items-center gap-2" 
               onClick={handleResumeDownload}
             >
