@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 import { personalInfo } from '@/data';
 import { ChevronDown, Download } from 'lucide-react';
@@ -25,42 +24,29 @@ const Hero = () => {
 
   const handleResumeDownload = (e: React.MouseEvent) => {
     e.preventDefault();
+    
+    // Direct link to resume in the public folder
+    const resumeUrl = "/Sajid_Rehman_Resume.pdf";
+    
+    // Create an anchor element
+    const link = document.createElement('a');
+    link.href = resumeUrl;
+    link.setAttribute('download', 'Sajid_Rehman_Resume.pdf');
+    link.setAttribute('target', '_blank');
+    document.body.appendChild(link);
+    
     try {
-      const resumeUrl = "https://github.com/sajidrehman2/My_resume/raw/main/sajid_resume.pdf";
-      fetch(resumeUrl)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          return response.blob();
-        })
-        .then(blob => {
-          const url = window.URL.createObjectURL(blob);
-          const link = document.createElement('a');
-          link.href = url;
-          link.setAttribute('download', 'Sajid_Rehman_Resume.pdf');
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-          window.URL.revokeObjectURL(url);
-          toast({
-            title: "Resume download started",
-            description: "Your resume download has been initiated.",
-          });
-        })
-        .catch(error => {
-          console.error('Download failed:', error);
-          toast({
-            title: "Download failed",
-            description: "Unable to download the resume. Please try again later.",
-            variant: "destructive",
-          });
-        });
-    } catch (error) {
-      console.error('Error initiating download:', error);
+      link.click();
+      document.body.removeChild(link);
       toast({
-        title: "Download error",
-        description: "There was a problem with your download request.",
+        title: "Resume download started",
+        description: "Your resume download has been initiated.",
+      });
+    } catch (error) {
+      console.error('Download failed:', error);
+      toast({
+        title: "Download failed",
+        description: "Unable to download the resume. Please try again later.",
         variant: "destructive",
       });
     }
