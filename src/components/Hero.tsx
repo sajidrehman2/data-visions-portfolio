@@ -2,6 +2,7 @@ import { useEffect, useRef } from 'react';
 import { personalInfo } from '@/data';
 import { ChevronDown, Download } from 'lucide-react';
 import { toast } from "@/components/ui/use-toast";
+import { handleResumeDownload } from "@/utils/downloadUtils";
 
 const Hero = () => {
   const profileRef = useRef<HTMLDivElement>(null);
@@ -22,31 +23,20 @@ const Hero = () => {
     });
   };
 
-  const handleResumeDownload = (e: React.MouseEvent) => {
+  const handleResumeDownloadClick = (e: React.MouseEvent) => {
     e.preventDefault();
     
-    // Direct link to resume in the public folder
-    const resumeUrl = "/Sajid_Rehman_Resume.pdf";
+    const result = handleResumeDownload();
     
-    // Create an anchor element
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.setAttribute('download', 'Sajid_Rehman_Resume.pdf');
-    link.setAttribute('target', '_blank');
-    document.body.appendChild(link);
-    
-    try {
-      link.click();
-      document.body.removeChild(link);
+    if (result.success) {
       toast({
         title: "Resume download started",
-        description: "Your resume download has been initiated.",
+        description: result.message,
       });
-    } catch (error) {
-      console.error('Download failed:', error);
+    } else {
       toast({
         title: "Download failed",
-        description: "Unable to download the resume. Please try again later.",
+        description: result.message,
         variant: "destructive",
       });
     }
@@ -106,7 +96,7 @@ const Hero = () => {
             <a 
               href="#" 
               className="px-6 py-3 border border-white/10 bg-secondary hover:bg-secondary/80 text-foreground rounded-md font-medium transition-all flex items-center gap-2" 
-              onClick={handleResumeDownload}
+              onClick={handleResumeDownloadClick}
             >
               <Download size={18} />
               Download CV

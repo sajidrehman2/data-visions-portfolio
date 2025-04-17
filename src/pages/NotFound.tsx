@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Download } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
+import { handleResumeDownload } from "@/utils/downloadUtils";
 
 const NotFound = () => {
   const location = useLocation();
@@ -25,29 +26,18 @@ const NotFound = () => {
     navigate("/");
   };
 
-  const handleResumeDownload = () => {
-    // Direct link to resume in the public folder
-    const resumeUrl = "/Sajid_Rehman_Resume.pdf";
+  const handleResumeDownloadClick = () => {
+    const result = handleResumeDownload();
     
-    // Create an anchor element
-    const link = document.createElement('a');
-    link.href = resumeUrl;
-    link.setAttribute('download', 'Sajid_Rehman_Resume.pdf');
-    link.setAttribute('target', '_blank');
-    document.body.appendChild(link);
-    
-    try {
-      link.click();
-      document.body.removeChild(link);
+    if (result.success) {
       toast({
         title: "Resume download started",
-        description: "Your resume download has been initiated.",
+        description: result.message,
       });
-    } catch (error) {
-      console.error('Download failed:', error);
+    } else {
       toast({
         title: "Download failed",
-        description: "Unable to download the resume. Please try again later.",
+        description: result.message,
         variant: "destructive",
       });
     }
@@ -74,7 +64,7 @@ const NotFound = () => {
           
           {location.pathname === "/resume.pdf" && (
             <Button 
-              onClick={handleResumeDownload} 
+              onClick={handleResumeDownloadClick} 
               className="inline-flex items-center gap-2"
               size="lg"
               variant="outline"
