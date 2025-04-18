@@ -23,19 +23,19 @@ endobj
 stream
 BT
 /F1 24 Tf
-50 750 Td
+72 750 Td
 (Sajid Rehman) Tj
 /F2 12 Tf
 0 -20 Td
 (AI Engineer & Data Scientist) Tj
 /F2 10 Tf
 0 -15 Td
-(Email: sajid.rehman@example.com | Phone: +1 (123) 456-7890 | LinkedIn: linkedin.com/in/sajidrehman) Tj
+(Email: sajid.rehman@example.com | Phone: +1 (123) 456-7890) Tj
 0 -15 Td
-(Website: www.sajidrehman.com | Github: github.com/sajidrehman) Tj
+(LinkedIn: linkedin.com/in/sajidrehman | Website: www.sajidrehman.com | Github: github.com/sajidrehman) Tj
 
 /F1 14 Tf
--50 -30 Td
+-20 -30 Td
 (PROFESSIONAL SUMMARY) Tj
 /F3 10 Tf
 0 -15 Td
@@ -75,18 +75,18 @@ BT
 0 -15 Td
 (Technical Skills:) Tj
 /F2 10 Tf
-0 -12 Td
+12 -12 Td
 (Python, PyTorch, TensorFlow, Keras, Scikit-learn, SQL, NoSQL, R, Docker, Kubernetes, AWS, Azure) Tj
 
 /F1 11 Tf
-0 -18 Td
+-12 -18 Td
 (AI & ML:) Tj
 /F2 10 Tf
-0 -12 Td
+12 -12 Td
 (Deep Learning, NLP, Computer Vision, Reinforcement Learning, Time Series Analysis, MLOps) Tj
 
 /F1 14 Tf
-0 -25 Td
+-12 -25 Td
 (PROFESSIONAL EXPERIENCE) Tj
 /F1 11 Tf
 0 -15 Td
@@ -94,8 +94,7 @@ BT
 /F2 10 Tf
 0 -12 Td
 (Google AI | Mountain View, CA | January 2022 - Present) Tj
-/F2 10 Tf
-0 -12 Td
+12 -12 Td
 (• Led a team of 5 engineers in developing state-of-the-art NLP models for search optimization) Tj
 0 -12 Td
 (• Improved query understanding accuracy by 24% through transformer-based architectures) Tj
@@ -105,13 +104,12 @@ BT
 (• Collaborated with product teams to integrate AI solutions across company platforms) Tj
 
 /F1 11 Tf
-0 -18 Td
+-12 -18 Td
 (Machine Learning Engineer) Tj
 /F2 10 Tf
 0 -12 Td
 (OpenAI | San Francisco, CA | June 2021 - December 2021) Tj
-/F2 10 Tf
-0 -12 Td
+12 -12 Td
 (• Contributed to the development of computer vision models for robotics applications) Tj
 0 -12 Td
 (• Optimized model training processes resulting in 30% faster convergence) Tj
@@ -119,22 +117,22 @@ BT
 (• Implemented ethical AI guidelines ensuring responsible AI deployment) Tj
 
 /F1 14 Tf
-0 -25 Td
+-12 -25 Td
 (PROJECTS) Tj
 /F1 11 Tf
 0 -15 Td
 (Autonomous Drone Navigation System) Tj
 /F2 10 Tf
-0 -12 Td
+12 -12 Td
 (• Developed a computer vision system enabling drones to navigate complex environments) Tj
 0 -12 Td
 (• Reduced collision incidents by 95% compared to previous navigation systems) Tj
 
 /F1 11 Tf
-0 -18 Td
+-12 -18 Td
 (Healthcare Prediction Platform) Tj
 /F2 10 Tf
-0 -12 Td
+12 -12 Td
 (• Created ML models to predict patient readmission risks with 87% accuracy) Tj
 0 -12 Td
 (• Deployed solution at three major hospitals, improving resource allocation) Tj
@@ -156,3 +154,4 @@ trailer
 startxref
 2708
 %%EOF
+
