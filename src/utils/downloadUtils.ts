@@ -5,15 +5,16 @@
 
 export const handleResumeDownload = () => {
   try {
-    // Use window.open for direct navigation to the PDF file
-    const pdfWindow = window.open('/Sajid_Rehman_Resume.pdf', '_blank');
+    // Open the image in a new tab
+    const imageUrl = '/lovable-uploads/aec9cbd2-3994-4ed9-8f32-172add3bb0eb.png';
+    const imageWindow = window.open(imageUrl, '_blank');
     
     // Check if the window was successfully opened
-    if (!pdfWindow || pdfWindow.closed || typeof pdfWindow.closed === 'undefined') {
-      console.error('PDF window could not be opened. Popup might be blocked.');
+    if (!imageWindow || imageWindow.closed || typeof imageWindow.closed === 'undefined') {
+      console.error('Image window could not be opened. Popup might be blocked.');
       return {
         success: false,
-        message: "Please allow popups to download the resume."
+        message: "Please allow popups to view the resume."
       };
     }
     
@@ -22,7 +23,7 @@ export const handleResumeDownload = () => {
       message: "Resume opened in new tab"
     };
   } catch (error) {
-    console.error('Download failed:', error);
+    console.error('Opening failed:', error);
     return {
       success: false,
       message: "Unable to open resume. Please try again later."
