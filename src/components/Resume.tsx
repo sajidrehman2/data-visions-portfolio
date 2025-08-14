@@ -1,70 +1,56 @@
 
 import React from 'react';
-import { Download, ExternalLink } from 'lucide-react';
+import { Download } from 'lucide-react';
 import { Button } from './ui/button';
-import { toast } from './ui/use-toast';
-import { handleResumeDownload } from '@/utils/downloadUtils';
+import { useToast } from '@/hooks/use-toast';
 
 const Resume = () => {
-  const cvImageUrl = '/lovable-uploads/aec9cbd2-3994-4ed9-8f32-172add3bb0eb.png';
+  const { toast } = useToast();
+  const resumeImageUrl = '/lovable-uploads/d05b1788-b238-4c4e-9926-c6ca14a71ace.png';
+  const pdfUrl = '/Sajid_Rehman_Resume.pdf';
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = cvImageUrl;
-    link.download = 'Sajid_Rehman_Resume.png';
+    link.href = pdfUrl;
+    link.download = 'Sajid_Rehman_Resume.pdf';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
-
+    
     toast({
       title: "Download started",
-      description: "Your resume will download as an image file.",
+      description: "Your resume PDF is being downloaded.",
     });
-  };
-
-  const handleOpenInNewTab = () => {
-    const result = handleResumeDownload();
-    
-    if (result.success) {
-      toast({
-        title: "Resume opened",
-        description: "Your resume has opened in a new tab.",
-      });
-    } else {
-      toast({
-        title: "Opening failed",
-        description: result.message,
-        variant: "destructive",
-      });
-    }
   };
 
   return (
     <section id="resume" className="container mx-auto px-6 section-spacing">
-      <div className="max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8">Resume</h2>
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-8">My Resume</h2>
         
         <div className="bg-card rounded-lg p-6 shadow-lg border border-border/50">
-          <p className="text-center mb-6 text-muted-foreground">
-            Click below to view or download my complete resume
-          </p>
+          {/* Resume Image Display */}
+          <div className="mb-6">
+            <div className="relative mx-auto max-w-3xl">
+              <img
+                src={resumeImageUrl}
+                alt="Sajid Rehman's Resume"
+                className="w-full h-auto rounded-lg shadow-md border border-border/20"
+                style={{ maxHeight: '1200px', objectFit: 'contain' }}
+              />
+            </div>
+          </div>
           
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button
-              onClick={handleOpenInNewTab}
-              variant="secondary"
-              className="flex items-center gap-2"
-            >
-              <ExternalLink size={16} />
-              View Resume
-            </Button>
+          {/* Download Button */}
+          <div className="flex justify-center">
             <Button
               onClick={handleDownload}
               variant="default"
-              className="flex items-center gap-2"
+              size="lg"
+              className="flex items-center gap-2 px-6 py-3"
             >
-              <Download size={16} />
-              Download Resume
+              <Download size={18} />
+              Download PDF Resume
             </Button>
           </div>
         </div>
