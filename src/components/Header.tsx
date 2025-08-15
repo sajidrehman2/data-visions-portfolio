@@ -3,6 +3,7 @@ import { navItems } from "@/data";
 import { Menu, X, Download } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 import { handleResumeDownload } from "@/utils/downloadUtils";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,25 +57,34 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a 
-          href="#home" 
+        <Link 
+          to="/" 
           className="text-xl font-bold tracking-tight text-gradient"
           aria-label="Sajid Rehman - AI Engineer & Data Scientist"
         >
           Sajid<span className="text-white">Rehman</span>
-        </a>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
             {navItems.map((item) => (
               <li key={item.name}>
-                <a
-                  href={item.href}
-                  className="text-sm font-medium link-underline text-foreground/80 hover:text-foreground transition-colors"
-                >
-                  {item.name}
-                </a>
+                {item.href.startsWith('/') ? (
+                  <Link
+                    to={item.href}
+                    className="text-sm font-medium link-underline text-foreground/80 hover:text-foreground transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
+                  <a
+                    href={item.href}
+                    className="text-sm font-medium link-underline text-foreground/80 hover:text-foreground transition-colors"
+                  >
+                    {item.name}
+                  </a>
+                )}
               </li>
             ))}
             <li>
@@ -107,14 +117,25 @@ const Header = () => {
       >
         <div className="flex flex-col h-full justify-center items-center space-y-8 p-8">
           {navItems.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
-              onClick={handleNavItemClick}
-            >
-              {item.name}
-            </a>
+            item.href.startsWith('/') ? (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
+                onClick={handleNavItemClick}
+              >
+                {item.name}
+              </Link>
+            ) : (
+              <a
+                key={item.name}
+                href={item.href}
+                className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
+                onClick={handleNavItemClick}
+              >
+                {item.name}
+              </a>
+            )
           ))}
           <a
             href="#"

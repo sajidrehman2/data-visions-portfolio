@@ -16,6 +16,7 @@ export const navItems: NavItem[] = [
   { name: "About", href: "#about" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
+  { name: "LinkedIn AI", href: "/linkedin-ai-assistant" },
   { name: "Contact", href: "#contact" },
 ];
 
