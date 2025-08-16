@@ -154,7 +154,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["YOLOv8", "Streamlit", "Computer Vision", "Deep Learning", "Python"],
     category: ["Computer Vision", "Deep Learning", "Machine Learning"],
-    githubUrl: "",
+    githubUrl: "https://github.com/sajidrehman2/RealTimeObjectDetection",
     demoUrl: "https://realtimeobjectdetection-fenihksplv5ajwkkjkabzc.streamlit.app/",
     featured: true,
   },
