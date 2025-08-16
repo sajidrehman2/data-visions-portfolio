@@ -148,6 +148,17 @@ export const projectCategories: ProjectCategory[] = [
 
 export const projects: Project[] = [
   {
+    id: "realtime-object-detection",
+    title: "Real-Time Object Detection with YOLOv8",
+    description: "A real-time object detection application powered by YOLOv8 and deployed with Streamlit Cloud. The app allows users to upload images or use their camera to instantly detect multiple objects with bounding boxes and labels. Demonstrates skills in Computer Vision, Deep Learning, and Model Deployment.",
+    image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    technologies: ["YOLOv8", "Streamlit", "Computer Vision", "Deep Learning", "Python"],
+    category: ["Computer Vision", "Deep Learning", "Machine Learning"],
+    githubUrl: "",
+    demoUrl: "https://realtimeobjectdetection-fenihksplv5ajwkkjkabzc.streamlit.app/",
+    featured: true,
+  },
+  {
     id: "linkedin-ai-assistant",
     title: "LinkedIn AI Assistant",
     description: "FastAPI-based AI tool that generates professional LinkedIn replies, summarizes conversations, and drafts messages in multiple tones and languages. Built with LLM integration, it provides smart, concise, and context-aware suggestions to enhance networking and communication efficiency.",
