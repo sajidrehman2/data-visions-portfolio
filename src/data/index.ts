@@ -207,6 +207,17 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/sajidrehman2/Data-science-and-Machine-learning-project/tree/main/Project%20of%20LoanApproval%20Prediction",
   },
   {
+    id: "pizza-llm-bot",
+    title: "Pizza LLM Bot",
+    description: "An intelligent chatbot powered by Large Language Models designed to assist customers with pizza ordering. The bot provides personalized recommendations, handles complex queries, and creates an engaging conversational experience for pizza lovers.",
+    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    technologies: ["Python", "LLM", "Streamlit", "NLP", "Chatbot"],
+    category: ["Natural Language Processing", "Machine Learning"],
+    githubUrl: "https://github.com/sajidrehman2/pizza-llm-bot",
+    demoUrl: "https://pizza-llm-bot-dv3dmv5ahudpp3vkjlkwrr.streamlit.app/",
+    featured: true,
+  },
+  {
     id: "sentiment-analysis",
     title: "Sentiment Analysis on Product Reviews",
     description: "Developed an NLP model to analyze customer sentiment from product reviews using TF-IDF, Word2Vec, and LSTM models.",
