@@ -11,6 +11,9 @@ import {
   ProjectCategory 
 } from "@/types";
 
+// Import project images
+import pizzaLlmBotImage from "@/assets/pizza-llm-bot.jpg";
+
 export const navItems: NavItem[] = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
@@ -210,7 +213,7 @@ export const projects: Project[] = [
     id: "pizza-llm-bot",
     title: "Pizza LLM Bot",
     description: "An intelligent chatbot powered by Large Language Models designed to assist customers with pizza ordering. The bot provides personalized recommendations, handles complex queries, and creates an engaging conversational experience for pizza lovers.",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: pizzaLlmBotImage,
     technologies: ["Python", "LLM", "Streamlit", "NLP", "Chatbot"],
     category: ["Natural Language Processing", "Machine Learning"],
     githubUrl: "https://github.com/sajidrehman2/pizza-llm-bot",
