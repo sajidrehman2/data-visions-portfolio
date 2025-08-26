@@ -191,6 +191,7 @@ export const projects: Project[] = [
     technologies: ["TensorFlow", "Keras", "OpenCV", "Python", "CNN"],
     category: ["Deep Learning", "Computer Vision", "Machine Learning"],
     githubUrl: "https://github.com/sajidrehman2/pneumonia-detection-using-X-ray-images",
+    demoUrl: "https://pneumonia-detection-using-x-ray-images-xuzapxbpoozurapphhr85gw.streamlit.app/",
     featured: true,
   },
   {
