@@ -170,6 +170,7 @@ export const projects: Project[] = [
     technologies: ["Python", "FastAPI", "LLM", "AI", "NLP"],
     category: ["Natural Language Processing", "Machine Learning"],
     githubUrl: "https://github.com/sajidrehman2/linkedin-ai-assistant",
+    demoUrl: "https://linkedin-ai-assistant-utfdpq76gnn4qo4whqbvsg.streamlit.app/",
     featured: true,
   },
   {
