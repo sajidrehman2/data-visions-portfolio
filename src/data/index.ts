@@ -13,6 +13,7 @@ import {
 
 // Import project images
 import pizzaLlmBotImage from "@/assets/pizza-llm-bot.jpg";
+import aiHrHiringAssistantImage from "@/assets/ai-hr-hiring-assistant.jpg";
 
 export const navItems: NavItem[] = [
   { name: "Home", href: "#home" },
@@ -218,6 +219,17 @@ export const projects: Project[] = [
     category: ["Natural Language Processing", "Machine Learning"],
     githubUrl: "https://github.com/sajidrehman2/pizza-llm-bot",
     demoUrl: "https://pizza-llm-bot-dv3dmv5ahudpp3vkjlkwrr.streamlit.app/",
+    featured: true,
+  },
+  {
+    id: "ai-hr-hiring-assistant",
+    title: "AI HR Hiring Assistant",
+    description: "An intelligent HR assistant powered by AI that streamlines the hiring process through automated resume analysis, candidate screening, and interview scheduling. Features advanced NLP for candidate evaluation and provides data-driven hiring recommendations.",
+    image: aiHrHiringAssistantImage,
+    technologies: ["Python", "Streamlit", "NLP", "AI", "Machine Learning"],
+    category: ["Natural Language Processing", "Machine Learning"],
+    githubUrl: "https://github.com/sajidrehman2/Sajid-AI-HR-Hiring-Assistant",
+    demoUrl: "https://sajid-ai-hr-hiring-assistant-zz4pmgasreecpe8mankqol.streamlit.app/",
     featured: true,
   },
   {
