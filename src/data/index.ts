@@ -14,6 +14,7 @@ import {
 // Import project images
 import pizzaLlmBotImage from "@/assets/pizza-llm-bot.jpg";
 import aiHrHiringAssistantImage from "@/assets/ai-hr-hiring-assistant.jpg";
+import smartHostelManagerImage from "@/assets/smart-hostel-manager.jpg";
 
 export const navItems: NavItem[] = [
   { name: "Home", href: "#home" },
@@ -232,6 +233,17 @@ export const projects: Project[] = [
     category: ["Natural Language Processing", "Machine Learning"],
     githubUrl: "https://github.com/sajidrehman2/Sajid-AI-HR-Hiring-Assistant",
     demoUrl: "https://sajid-ai-hr-hiring-assistant-zz4pmgasreecpe8mankqol.streamlit.app/",
+    featured: true,
+  },
+  {
+    id: "smart-hostel-manager",
+    title: "Smart Hostel Manager", 
+    description: "An intelligent hostel management system that streamlines operations through automated booking management, room allocation, and guest services. Features real-time occupancy tracking, billing automation, and data analytics for improved hostel operations and guest experience.",
+    image: smartHostelManagerImage,
+    technologies: ["Python", "Streamlit", "Data Analytics", "Management System", "Automation"],
+    category: ["Data Visualization", "Predictive Analytics", "Machine Learning"],
+    githubUrl: "https://github.com/sajidrehman2/sajid-smart-hostel-manager",
+    demoUrl: "https://sajid-smart-hostel-manager-q3shsmepqrsk3iirbn7m5t.streamlit.app/",
     featured: true,
   },
   {
