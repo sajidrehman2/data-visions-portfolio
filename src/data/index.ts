@@ -156,7 +156,7 @@ export const projects: Project[] = [
   {
     id: "realtime-object-detection",
     title: "Real-Time Object Detection with YOLOv8",
-    description: "A real-time object detection application powered by YOLOv8 and deployed with Streamlit Cloud. The app allows users to upload images or use their camera to instantly detect multiple objects with bounding boxes and labels. Demonstrates skills in Computer Vision, Deep Learning, and Model Deployment.",
+    description: "Manual object spotting in images and video is slow and error-prone. I built a YOLOv8 detector deployed on Streamlit Cloud that lets users upload an image or use their camera to instantly identify multiple objects with bounding boxes and labels. Built with YOLOv8, OpenCV, Python, and Streamlit.",
     image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["YOLOv8", "Streamlit", "Computer Vision", "Deep Learning", "Python"],
     category: ["Computer Vision", "Deep Learning", "Machine Learning"],
@@ -167,7 +167,7 @@ export const projects: Project[] = [
   {
     id: "linkedin-ai-assistant",
     title: "LinkedIn AI Assistant",
-    description: "FastAPI-based AI tool that generates professional LinkedIn replies, summarizes conversations, and drafts messages in multiple tones and languages. Built with LLM integration, it provides smart, concise, and context-aware suggestions to enhance networking and communication efficiency.",
+    description: "Crafting good LinkedIn replies at scale is tedious and tone-sensitive. I built a FastAPI service that uses LLMs to draft replies, summarize conversations, and produce messages in multiple tones and languages from a single prompt. Built with Python, FastAPI, LangChain, and OpenAI-compatible LLM APIs.",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "FastAPI", "LLM", "AI", "NLP"],
     category: ["Natural Language Processing", "Machine Learning"],
@@ -178,7 +178,7 @@ export const projects: Project[] = [
   {
     id: "bbc-news-classifier",
     title: "BBC News Detection",
-    description: "Developed an NLP-based model to classify BBC news articles. Trained the model with Python, scikit-learn, and TensorFlow/PyTorch. Improved accuracy through feature engineering and optimization. Automated the model for automated news classification.",
+    description: "Categorizing large volumes of news articles by hand is impractical. I trained an NLP classifier on the BBC News dataset that automatically assigns each article to its correct topic, with feature engineering and model tuning to maximize accuracy. Built with Python, scikit-learn, TensorFlow/PyTorch, and classical NLP techniques.",
     image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-Learn", "NLP"],
     category: ["Machine Learning", "Natural Language Processing"],
@@ -188,7 +188,7 @@ export const projects: Project[] = [
   {
     id: "pneumonia-detection",
     title: "Pneumonia Detection Using X-ray Images",
-    description: "Developed a deep learning model to detect pneumonia from chest X-ray images. Used CNN architectures (e.g., VGG16, ResNet) for image classification. Trained the model using TensorFlow/Keras and OpenCV with a labeled dataset. Improved detection accuracy through data augmentation and hyperparameter tuning. Deployed the model for real-time diagnosis to assist in medical decision-making.",
+    description: "Early pneumonia diagnosis from chest X-rays depends on scarce radiologist time. I trained a CNN (VGG16/ResNet) on a labeled X-ray dataset that classifies scans as normal or pneumonia and deployed it on Streamlit for real-time inference. Built with TensorFlow, Keras, OpenCV, and Python, with data augmentation and hyperparameter tuning for accuracy.",
     image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["TensorFlow", "Keras", "OpenCV", "Python", "CNN"],
     category: ["Deep Learning", "Computer Vision", "Machine Learning"],
@@ -199,7 +199,7 @@ export const projects: Project[] = [
   {
     id: "movie-recommendation",
     title: "Movie Recommendation System",
-    description: "Developed a machine learning model to predict loan approval based on applicant data. Processed and analyzed key features like income, credit history, and loan amount. Improved accuracy through feature engineering and hyperparameter tuning. Deployed the model for automated eligibility assessment.",
+    description: "Users struggle to find movies that match their taste in huge catalogs. I built a content-based recommendation system that ranks similar films from metadata features like genre, cast, and keywords. Built with Python, Pandas, scikit-learn, and cosine similarity.",
     image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Logistic Regression", "Random Forest", "XGBoost"],
     category: ["Machine Learning", "Predictive Analytics"],
@@ -208,7 +208,7 @@ export const projects: Project[] = [
   {
     id: "loan-approval-predictor",
     title: "Loan Approval Prediction",
-    description: "Developed a machine learning model to predict loan approval based on applicant data. Processed and analyzed key features like income, credit history, and loan amount. Improved accuracy through feature engineering and hyperparameter tuning. Deployed the model for automated eligibility assessment.",
+    description: "Manual loan eligibility checks are slow and inconsistent. I built a machine-learning model that predicts loan approval from applicant features like income, credit history, and loan amount, with feature engineering and hyperparameter tuning to lift accuracy. Built with Python, scikit-learn, Logistic Regression, Random Forest, and XGBoost.",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Logistic Regression", "Random Forest", "XGBoost"],
     category: ["Machine Learning", "Predictive Analytics"],
@@ -217,7 +217,7 @@ export const projects: Project[] = [
   {
     id: "pizza-llm-bot",
     title: "Pizza LLM Bot",
-    description: "An intelligent chatbot powered by Large Language Models designed to assist customers with pizza ordering. The bot provides personalized recommendations, handles complex queries, and creates an engaging conversational experience for pizza lovers.",
+    description: "Ordering pizza through static menus is rigid and impersonal. I built a conversational LLM chatbot that takes natural-language orders, recommends items based on preferences, and handles multi-turn questions about the menu. Built with Python, LangChain, an OpenAI-compatible LLM, and Streamlit.",
     image: pizzaLlmBotImage,
     technologies: ["Python", "LLM", "Streamlit", "NLP", "Chatbot"],
     category: ["Natural Language Processing", "Machine Learning"],
@@ -228,7 +228,7 @@ export const projects: Project[] = [
   {
     id: "ai-hr-hiring-assistant",
     title: "AI HR Hiring Assistant",
-    description: "An intelligent HR assistant powered by AI that streamlines the hiring process through automated resume analysis, candidate screening, and interview scheduling. Features advanced NLP for candidate evaluation and provides data-driven hiring recommendations.",
+    description: "HR teams burn hours sorting through resumes for each role. I built a Streamlit app that parses uploaded resumes, scores candidates against a job description using NLP, and surfaces a ranked shortlist with reasoning. Built with Python, Streamlit, spaCy, and LLM-assisted evaluation.",
     image: aiHrHiringAssistantImage,
     technologies: ["Python", "Streamlit", "NLP", "AI", "Machine Learning"],
     category: ["Natural Language Processing", "Machine Learning"],
@@ -239,7 +239,7 @@ export const projects: Project[] = [
   {
     id: "smart-hostel-manager",
     title: "Smart Hostel Manager", 
-    description: "An intelligent hostel management system that streamlines operations through automated booking management, room allocation, and guest services. Features real-time occupancy tracking, billing automation, and data analytics for improved hostel operations and guest experience.",
+    description: "Small hostels still juggle bookings and billing across spreadsheets. I built a Streamlit-based management system that handles room allocation, real-time occupancy, automated billing, and basic analytics in one dashboard. Built with Python, Streamlit, Pandas, and SQLite.",
     image: smartHostelManagerImage,
     technologies: ["Python", "Streamlit", "Data Analytics", "Management System", "Automation"],
     category: ["Data Visualization", "Predictive Analytics", "Machine Learning"],
@@ -250,7 +250,7 @@ export const projects: Project[] = [
   {
     id: "sajids-ai-diner",
     title: "Sajid's AI Diner (SmartDineAI)",
-    description: "A full-stack AI-powered restaurant assistant with a Next.js frontend (smartdineai.vercel.app), a Streamlit demo, and a FastAPI/Render backend. Features intelligent menu recommendations, order assistance, and conversational AI to enhance the dining experience.",
+    description: "Restaurants need a faster way to take orders and answer menu questions online. I built a full-stack AI dining assistant — Next.js frontend on Vercel, FastAPI/LLM backend on Render, plus a Streamlit demo — that gives menu recommendations, takes orders, and chats with diners. Built with Next.js, FastAPI, Python, LLMs, Render, and Vercel.",
     image: sajidsAiDinerImage,
     technologies: ["Next.js", "FastAPI", "Python", "AI", "LLM", "Render", "Vercel"],
     category: ["Natural Language Processing", "Machine Learning"],
@@ -261,7 +261,7 @@ export const projects: Project[] = [
   {
     id: "sentiment-analysis",
     title: "Sentiment Analysis on Product Reviews",
-    description: "Developed an NLP model to analyze customer sentiment from product reviews using TF-IDF, Word2Vec, and LSTM models.",
+    description: "Brands need fast signal from thousands of product reviews. I built an NLP pipeline that classifies review sentiment using TF-IDF, Word2Vec, and an LSTM, with a comparison of classical vs. deep approaches. Built with Python, scikit-learn, Gensim, and TensorFlow/Keras.",
     image: "https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "TF-IDF", "Word2Vec", "LSTM", "NLP"],
     category: ["Natural Language Processing", "Machine Learning"],
@@ -270,7 +270,7 @@ export const projects: Project[] = [
   {
     id: "fake-news-detector",
     title: "Fake News Detection",
-    description: "Built an NLP-based classifier using Logistic Regression, Random Forest, and Transformers to detect fake news from articles.",
+    description: "Misinformation spreads faster than humans can fact-check. I built an NLP classifier that flags fake-news articles using Logistic Regression, Random Forest, and Transformer-based models, then compared their accuracy and trade-offs. Built with Python, scikit-learn, and Hugging Face Transformers.",
     image: "https://images.unsplash.com/photo-1590070585459-e5b3a84a4421?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Logistic Regression", "Random Forest", "Transformers"],
     category: ["Natural Language Processing", "Machine Learning"],
@@ -279,7 +279,7 @@ export const projects: Project[] = [
   {
     id: "spotify-trackers",
     title: "Spotify Track Analysis",
-    description: "Analysis and visualization of Spotify track features, identifying patterns in popular music and creating insights for music producers.",
+    description: "Music producers want to know what makes tracks chart. I analyzed Spotify audio features (energy, danceability, tempo, valence) across thousands of tracks and visualized the patterns that correlate with popularity. Built with Python, Pandas, Seaborn, and Matplotlib.",
     image: "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Pandas", "Seaborn", "Matplotlib", "Data Analysis"],
     category: ["Data Visualization", "Machine Learning"],
@@ -288,7 +288,7 @@ export const projects: Project[] = [
   {
     id: "house-price-prediction",
     title: "House Price Prediction",
-    description: "Advanced regression model for predicting house prices using multiple features. Implemented feature engineering and ensemble methods for improved accuracy.",
+    description: "Pricing a home is hard when many features interact non-linearly. I built a regression model that predicts house prices from property and neighborhood features, using feature engineering and ensemble methods to reduce error. Built with Python, scikit-learn, XGBoost, Pandas, and NumPy.",
     image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Scikit-Learn", "XGBoost", "Pandas", "NumPy"],
     category: ["Machine Learning", "Predictive Analytics"],
@@ -297,7 +297,7 @@ export const projects: Project[] = [
   {
     id: "cement-strength",
     title: "Cement Strength Predictor",
-    description: "Machine learning model to predict cement strength based on composition and environmental factors. Essential for construction quality control.",
+    description: "Cement strength is critical for construction safety but slow to test physically. I built a regression model that predicts compressive strength from mix composition and curing age, helping QC teams catch weak batches earlier. Built with Python, scikit-learn, Pandas, and NumPy.",
     image: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Regression"],
     category: ["Machine Learning", "Predictive Analytics"],
@@ -306,7 +306,7 @@ export const projects: Project[] = [
   {
     id: "digit-recognition",
     title: "Handwritten Digit Recognition",
-    description: "CNN-based classifier for handwritten digits using the MNIST dataset. Achieved high accuracy with real-time prediction capability.",
+    description: "Reading handwritten digits is a foundational computer-vision problem with real-world uses like postal sorting. I built a CNN classifier trained on MNIST that achieves high accuracy and runs predictions in real time on user-drawn input. Built with TensorFlow, Keras, Python, NumPy, and OpenCV.",
     image: "https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["TensorFlow", "Keras", "Python", "NumPy", "OpenCV"],
     category: ["Deep Learning", "Computer Vision"],
@@ -373,10 +373,10 @@ export const personalInfo = {
   email: "sajid.rehmanoffical95001@gmail.com",
   phone: "+923038047795",
   location: "Peshawar, Pakistan, 25000",
-  bio: `I'm a passionate AI Engineer and Data Scientist with experience in developing innovative machine learning and deep learning solutions. My work spans areas like computer vision, natural language processing, and predictive analytics, with a strong focus on building AI systems that address real-world challenges.
+  bio: `I'm an AI Engineer and Data Scientist based in Peshawar, Pakistan, with 2+ years of hands-on experience designing and shipping machine learning, deep learning, and NLP systems. I'm currently completing my B.S. in Information Technology at Agriculture University Peshawar, alongside specialized training in Python for Data Science & AI at Saylani Trust (SMIT).
 
-With a solid academic background and hands-on experience, I've contributed to projects involving data-driven decision-making, model deployment, and end-to-end AI pipelines. I've had the opportunity to work on impactful projects and continuously sharpen my skills in both research and practical implementation.
+My work spans computer vision, natural language processing, and predictive analytics — from training CNNs on medical X-rays to building LLM-powered chatbots and full-stack AI products with FastAPI, Streamlit, Next.js, and Render. I've delivered end-to-end pipelines for clients and internal teams at Saylani Welfare Trust and Code Alpha, covering everything from data prep and model training to deployment and monitoring.
 
-I approach AI development with a blend of curiosity, creativity, and responsibility — aiming to build solutions that are not only effective but also ethical and interpretable. I'm especially passionate about using AI for positive impact in fields like healthcare, climate, and education. When I'm not working with data, I enjoy hiking, playing piano, and diving into the latest breakthroughs in tech and science.`,
-  resumeUrl: "/resume.pdf"
+I approach AI with curiosity, creativity, and responsibility — focused on building systems that are accurate, interpretable, and genuinely useful. I care most about applying AI to healthcare, education, and real-world automation. Outside of work, I'm usually exploring new ML papers, contributing to open-source projects, or sharpening my data skills on Kaggle.`,
+  resumeUrl: "/Sajid_Rehman_Resume.pdf"
 };
