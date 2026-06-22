@@ -217,7 +217,7 @@ export const projects: Project[] = [
   {
     id: "pizza-llm-bot",
     title: "Pizza LLM Bot",
-    description: "An intelligent chatbot powered by Large Language Models designed to assist customers with pizza ordering. The bot provides personalized recommendations, handles complex queries, and creates an engaging conversational experience for pizza lovers.",
+    description: "Ordering pizza through static menus is rigid and impersonal. I built a conversational LLM chatbot that takes natural-language orders, recommends items based on preferences, and handles multi-turn questions about the menu. Built with Python, LangChain, an OpenAI-compatible LLM, and Streamlit.",
     image: pizzaLlmBotImage,
     technologies: ["Python", "LLM", "Streamlit", "NLP", "Chatbot"],
     category: ["Natural Language Processing", "Machine Learning"],
