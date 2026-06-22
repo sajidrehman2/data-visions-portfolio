@@ -279,7 +279,7 @@ export const projects: Project[] = [
   {
     id: "spotify-trackers",
     title: "Spotify Track Analysis",
-    description: "Analysis and visualization of Spotify track features, identifying patterns in popular music and creating insights for music producers.",
+    description: "Music producers want to know what makes tracks chart. I analyzed Spotify audio features (energy, danceability, tempo, valence) across thousands of tracks and visualized the patterns that correlate with popularity. Built with Python, Pandas, Seaborn, and Matplotlib.",
     image: "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Pandas", "Seaborn", "Matplotlib", "Data Analysis"],
     category: ["Data Visualization", "Machine Learning"],
