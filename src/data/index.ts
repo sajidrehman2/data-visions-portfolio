@@ -306,7 +306,7 @@ export const projects: Project[] = [
   {
     id: "digit-recognition",
     title: "Handwritten Digit Recognition",
-    description: "CNN-based classifier for handwritten digits using the MNIST dataset. Achieved high accuracy with real-time prediction capability.",
+    description: "Reading handwritten digits is a foundational computer-vision problem with real-world uses like postal sorting. I built a CNN classifier trained on MNIST that achieves high accuracy and runs predictions in real time on user-drawn input. Built with TensorFlow, Keras, Python, NumPy, and OpenCV.",
     image: "https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["TensorFlow", "Keras", "Python", "NumPy", "OpenCV"],
     category: ["Deep Learning", "Computer Vision"],
