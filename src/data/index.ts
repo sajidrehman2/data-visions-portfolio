@@ -261,7 +261,7 @@ export const projects: Project[] = [
   {
     id: "sentiment-analysis",
     title: "Sentiment Analysis on Product Reviews",
-    description: "Developed an NLP model to analyze customer sentiment from product reviews using TF-IDF, Word2Vec, and LSTM models.",
+    description: "Brands need fast signal from thousands of product reviews. I built an NLP pipeline that classifies review sentiment using TF-IDF, Word2Vec, and an LSTM, with a comparison of classical vs. deep approaches. Built with Python, scikit-learn, Gensim, and TensorFlow/Keras.",
     image: "https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "TF-IDF", "Word2Vec", "LSTM", "NLP"],
     category: ["Natural Language Processing", "Machine Learning"],
