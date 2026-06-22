@@ -99,7 +99,7 @@ const Hero = () => {
               onClick={handleResumeDownloadClick}
             >
               <Download size={18} />
-              Download CV
+              Download Resume
             </a>
           </div>
         </div>
