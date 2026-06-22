@@ -199,7 +199,7 @@ export const projects: Project[] = [
   {
     id: "movie-recommendation",
     title: "Movie Recommendation System",
-    description: "Developed a machine learning model to predict loan approval based on applicant data. Processed and analyzed key features like income, credit history, and loan amount. Improved accuracy through feature engineering and hyperparameter tuning. Deployed the model for automated eligibility assessment.",
+    description: "Users struggle to find movies that match their taste in huge catalogs. I built a content-based recommendation system that ranks similar films from metadata features like genre, cast, and keywords. Built with Python, Pandas, scikit-learn, and cosine similarity.",
     image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Logistic Regression", "Random Forest", "XGBoost"],
     category: ["Machine Learning", "Predictive Analytics"],
