@@ -188,7 +188,7 @@ export const projects: Project[] = [
   {
     id: "pneumonia-detection",
     title: "Pneumonia Detection Using X-ray Images",
-    description: "Developed a deep learning model to detect pneumonia from chest X-ray images. Used CNN architectures (e.g., VGG16, ResNet) for image classification. Trained the model using TensorFlow/Keras and OpenCV with a labeled dataset. Improved detection accuracy through data augmentation and hyperparameter tuning. Deployed the model for real-time diagnosis to assist in medical decision-making.",
+    description: "Early pneumonia diagnosis from chest X-rays depends on scarce radiologist time. I trained a CNN (VGG16/ResNet) on a labeled X-ray dataset that classifies scans as normal or pneumonia and deployed it on Streamlit for real-time inference. Built with TensorFlow, Keras, OpenCV, and Python, with data augmentation and hyperparameter tuning for accuracy.",
     image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["TensorFlow", "Keras", "OpenCV", "Python", "CNN"],
     category: ["Deep Learning", "Computer Vision", "Machine Learning"],
