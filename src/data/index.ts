@@ -178,7 +178,7 @@ export const projects: Project[] = [
   {
     id: "bbc-news-classifier",
     title: "BBC News Detection",
-    description: "Developed an NLP-based model to classify BBC news articles. Trained the model with Python, scikit-learn, and TensorFlow/PyTorch. Improved accuracy through feature engineering and optimization. Automated the model for automated news classification.",
+    description: "Categorizing large volumes of news articles by hand is impractical. I trained an NLP classifier on the BBC News dataset that automatically assigns each article to its correct topic, with feature engineering and model tuning to maximize accuracy. Built with Python, scikit-learn, TensorFlow/PyTorch, and classical NLP techniques.",
     image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-Learn", "NLP"],
     category: ["Machine Learning", "Natural Language Processing"],
