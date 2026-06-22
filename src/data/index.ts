@@ -250,7 +250,7 @@ export const projects: Project[] = [
   {
     id: "sajids-ai-diner",
     title: "Sajid's AI Diner (SmartDineAI)",
-    description: "A full-stack AI-powered restaurant assistant with a Next.js frontend (smartdineai.vercel.app), a Streamlit demo, and a FastAPI/Render backend. Features intelligent menu recommendations, order assistance, and conversational AI to enhance the dining experience.",
+    description: "Restaurants need a faster way to take orders and answer menu questions online. I built a full-stack AI dining assistant — Next.js frontend on Vercel, FastAPI/LLM backend on Render, plus a Streamlit demo — that gives menu recommendations, takes orders, and chats with diners. Built with Next.js, FastAPI, Python, LLMs, Render, and Vercel.",
     image: sajidsAiDinerImage,
     technologies: ["Next.js", "FastAPI", "Python", "AI", "LLM", "Render", "Vercel"],
     category: ["Natural Language Processing", "Machine Learning"],
