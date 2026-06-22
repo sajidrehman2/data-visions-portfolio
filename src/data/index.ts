@@ -167,7 +167,7 @@ export const projects: Project[] = [
   {
     id: "linkedin-ai-assistant",
     title: "LinkedIn AI Assistant",
-    description: "FastAPI-based AI tool that generates professional LinkedIn replies, summarizes conversations, and drafts messages in multiple tones and languages. Built with LLM integration, it provides smart, concise, and context-aware suggestions to enhance networking and communication efficiency.",
+    description: "Crafting good LinkedIn replies at scale is tedious and tone-sensitive. I built a FastAPI service that uses LLMs to draft replies, summarize conversations, and produce messages in multiple tones and languages from a single prompt. Built with Python, FastAPI, LangChain, and OpenAI-compatible LLM APIs.",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "FastAPI", "LLM", "AI", "NLP"],
     category: ["Natural Language Processing", "Machine Learning"],
