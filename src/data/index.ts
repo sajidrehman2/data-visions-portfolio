@@ -239,7 +239,7 @@ export const projects: Project[] = [
   {
     id: "smart-hostel-manager",
     title: "Smart Hostel Manager", 
-    description: "An intelligent hostel management system that streamlines operations through automated booking management, room allocation, and guest services. Features real-time occupancy tracking, billing automation, and data analytics for improved hostel operations and guest experience.",
+    description: "Small hostels still juggle bookings and billing across spreadsheets. I built a Streamlit-based management system that handles room allocation, real-time occupancy, automated billing, and basic analytics in one dashboard. Built with Python, Streamlit, Pandas, and SQLite.",
     image: smartHostelManagerImage,
     technologies: ["Python", "Streamlit", "Data Analytics", "Management System", "Automation"],
     category: ["Data Visualization", "Predictive Analytics", "Machine Learning"],
