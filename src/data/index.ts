@@ -228,7 +228,7 @@ export const projects: Project[] = [
   {
     id: "ai-hr-hiring-assistant",
     title: "AI HR Hiring Assistant",
-    description: "An intelligent HR assistant powered by AI that streamlines the hiring process through automated resume analysis, candidate screening, and interview scheduling. Features advanced NLP for candidate evaluation and provides data-driven hiring recommendations.",
+    description: "HR teams burn hours sorting through resumes for each role. I built a Streamlit app that parses uploaded resumes, scores candidates against a job description using NLP, and surfaces a ranked shortlist with reasoning. Built with Python, Streamlit, spaCy, and LLM-assisted evaluation.",
     image: aiHrHiringAssistantImage,
     technologies: ["Python", "Streamlit", "NLP", "AI", "Machine Learning"],
     category: ["Natural Language Processing", "Machine Learning"],
