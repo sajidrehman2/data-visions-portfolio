@@ -257,7 +257,7 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/sajidrehman2/sajids-ai-diner",
     demoUrl: "https://smartdineai.vercel.app/",
     featured: true,
-  }
+  },
   {
     id: "sentiment-analysis",
     title: "Sentiment Analysis on Product Reviews",
