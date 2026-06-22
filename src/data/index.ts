@@ -270,7 +270,7 @@ export const projects: Project[] = [
   {
     id: "fake-news-detector",
     title: "Fake News Detection",
-    description: "Built an NLP-based classifier using Logistic Regression, Random Forest, and Transformers to detect fake news from articles.",
+    description: "Misinformation spreads faster than humans can fact-check. I built an NLP classifier that flags fake-news articles using Logistic Regression, Random Forest, and Transformer-based models, then compared their accuracy and trade-offs. Built with Python, scikit-learn, and Hugging Face Transformers.",
     image: "https://images.unsplash.com/photo-1590070585459-e5b3a84a4421?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Logistic Regression", "Random Forest", "Transformers"],
     category: ["Natural Language Processing", "Machine Learning"],
