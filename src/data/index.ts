@@ -15,6 +15,7 @@ import {
 import pizzaLlmBotImage from "@/assets/pizza-llm-bot.jpg";
 import aiHrHiringAssistantImage from "@/assets/ai-hr-hiring-assistant.jpg";
 import smartHostelManagerImage from "@/assets/smart-hostel-manager.jpg";
+import sajidsAiDinerImage from "@/assets/sajids-ai-diner.jpg";
 
 export const navItems: NavItem[] = [
   { name: "Home", href: "#home" },
@@ -246,6 +247,17 @@ export const projects: Project[] = [
     demoUrl: "https://sajid-smart-hostel-manager-q3shsmepqrsk3iirbn7m5t.streamlit.app/",
     featured: true,
   },
+  {
+    id: "sajids-ai-diner",
+    title: "Sajid's AI Diner (SmartDineAI)",
+    description: "A full-stack AI-powered restaurant assistant with a Next.js frontend (smartdineai.vercel.app), a Streamlit demo, and a FastAPI/Render backend. Features intelligent menu recommendations, order assistance, and conversational AI to enhance the dining experience.",
+    image: sajidsAiDinerImage,
+    technologies: ["Next.js", "FastAPI", "Python", "AI", "LLM", "Render", "Vercel"],
+    category: ["Natural Language Processing", "Machine Learning"],
+    githubUrl: "https://github.com/sajidrehman2/sajids-ai-diner",
+    demoUrl: "https://smartdineai.vercel.app/",
+    featured: true,
+  }
   {
     id: "sentiment-analysis",
     title: "Sentiment Analysis on Product Reviews",
