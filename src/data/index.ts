@@ -288,7 +288,7 @@ export const projects: Project[] = [
   {
     id: "house-price-prediction",
     title: "House Price Prediction",
-    description: "Advanced regression model for predicting house prices using multiple features. Implemented feature engineering and ensemble methods for improved accuracy.",
+    description: "Pricing a home is hard when many features interact non-linearly. I built a regression model that predicts house prices from property and neighborhood features, using feature engineering and ensemble methods to reduce error. Built with Python, scikit-learn, XGBoost, Pandas, and NumPy.",
     image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Scikit-Learn", "XGBoost", "Pandas", "NumPy"],
     category: ["Machine Learning", "Predictive Analytics"],
