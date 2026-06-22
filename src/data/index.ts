@@ -297,7 +297,7 @@ export const projects: Project[] = [
   {
     id: "cement-strength",
     title: "Cement Strength Predictor",
-    description: "Machine learning model to predict cement strength based on composition and environmental factors. Essential for construction quality control.",
+    description: "Cement strength is critical for construction safety but slow to test physically. I built a regression model that predicts compressive strength from mix composition and curing age, helping QC teams catch weak batches earlier. Built with Python, scikit-learn, Pandas, and NumPy.",
     image: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Regression"],
     category: ["Machine Learning", "Predictive Analytics"],
