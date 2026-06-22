@@ -373,10 +373,10 @@ export const personalInfo = {
   email: "sajid.rehmanoffical95001@gmail.com",
   phone: "+923038047795",
   location: "Peshawar, Pakistan, 25000",
-  bio: `I'm a passionate AI Engineer and Data Scientist with experience in developing innovative machine learning and deep learning solutions. My work spans areas like computer vision, natural language processing, and predictive analytics, with a strong focus on building AI systems that address real-world challenges.
+  bio: `I'm an AI Engineer and Data Scientist based in Peshawar, Pakistan, with 2+ years of hands-on experience designing and shipping machine learning, deep learning, and NLP systems. I'm currently completing my B.S. in Information Technology at Agriculture University Peshawar, alongside specialized training in Python for Data Science & AI at Saylani Trust (SMIT).
 
-With a solid academic background and hands-on experience, I've contributed to projects involving data-driven decision-making, model deployment, and end-to-end AI pipelines. I've had the opportunity to work on impactful projects and continuously sharpen my skills in both research and practical implementation.
+My work spans computer vision, natural language processing, and predictive analytics — from training CNNs on medical X-rays to building LLM-powered chatbots and full-stack AI products with FastAPI, Streamlit, Next.js, and Render. I've delivered end-to-end pipelines for clients and internal teams at Saylani Welfare Trust and Code Alpha, covering everything from data prep and model training to deployment and monitoring.
 
-I approach AI development with a blend of curiosity, creativity, and responsibility — aiming to build solutions that are not only effective but also ethical and interpretable. I'm especially passionate about using AI for positive impact in fields like healthcare, climate, and education. When I'm not working with data, I enjoy hiking, playing piano, and diving into the latest breakthroughs in tech and science.`,
-  resumeUrl: "/resume.pdf"
+I approach AI with curiosity, creativity, and responsibility — focused on building systems that are accurate, interpretable, and genuinely useful. I care most about applying AI to healthcare, education, and real-world automation. Outside of work, I'm usually exploring new ML papers, contributing to open-source projects, or sharpening my data skills on Kaggle.`,
+  resumeUrl: "/Sajid_Rehman_Resume.pdf"
 };
