@@ -208,7 +208,7 @@ export const projects: Project[] = [
   {
     id: "loan-approval-predictor",
     title: "Loan Approval Prediction",
-    description: "Developed a machine learning model to predict loan approval based on applicant data. Processed and analyzed key features like income, credit history, and loan amount. Improved accuracy through feature engineering and hyperparameter tuning. Deployed the model for automated eligibility assessment.",
+    description: "Manual loan eligibility checks are slow and inconsistent. I built a machine-learning model that predicts loan approval from applicant features like income, credit history, and loan amount, with feature engineering and hyperparameter tuning to lift accuracy. Built with Python, scikit-learn, Logistic Regression, Random Forest, and XGBoost.",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Logistic Regression", "Random Forest", "XGBoost"],
     category: ["Machine Learning", "Predictive Analytics"],
