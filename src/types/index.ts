@@ -11,7 +11,13 @@ export interface Skill {
   icon?: string;
 }
 
-export type SkillCategory = 
+export type SkillCategory =
+  | "Languages"
+  | "ML/DL"
+  | "NLP/LLM"
+  | "Computer Vision"
+  | "Tools & Cloud"
+  // Legacy categories retained so existing data entries still type-check
   | "Programming Languages"
   | "Machine Learning"
   | "Deep Learning"
@@ -55,14 +61,12 @@ export interface Project {
   featured?: boolean;
 }
 
-export type ProjectCategory = 
+export type ProjectCategory =
   | "All"
-  | "Machine Learning"
-  | "Deep Learning" 
+  | "NLP/LLM"
   | "Computer Vision"
-  | "Natural Language Processing"
-  | "Data Visualization"
-  | "Predictive Analytics";
+  | "Full-Stack"
+  | "Data Analysis";
 
 export interface SocialLink {
   name: string;

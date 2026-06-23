@@ -1,4 +1,3 @@
-
 import { 
   NavItem, 
   Skill, 
@@ -20,9 +19,8 @@ import sajidsAiDinerImage from "@/assets/sajids-ai-diner.jpg";
 export const navItems: NavItem[] = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "LinkedIn AI", href: "/linkedin-ai-assistant" },
+  { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -56,7 +54,7 @@ export const experiences: Experience[] = [
     company: "Saylani Welfare Trust",
     location: "Peshawar, Pakistan",
     duration: "Jan 2023 - Aug 2024",
-    description: "Designed and implemented machine learning algorithms for natural language processing tasks, enhancing text analysis and automation. Developed AI models for image recognition and object detection, improving accuracy and efficiency in visual data processing. Collaborated with cross-functional teams to integrate AI solutions into existing products, streamlining workflows and enhancing functionality.",
+    description: "Designed and implemented machine learning algorithms for natural language processing tasks, enhancing text analysis and automation. Developed AI models for image recognition and object detection, improving accuracy and efficiency in visual data processing.",
     technologies: ["Python", "TensorFlow", "PyTorch", "NLP", "Computer Vision"],
   },
   {
@@ -64,7 +62,7 @@ export const experiences: Experience[] = [
     company: "Code Alpha",
     location: "Peshawar, Pakistan",
     duration: "Jan 2024 - Aug 2024",
-    description: "Assisting in the development and optimization of AI/ML models for real-world applications. Working with large-scale datasets for training and evaluation, and implementing deep learning and NLP techniques to support various AI solutions. Collaborating closely with the data science team to improve model performance and ensure accurate results. Responsible for documenting research findings and regularly presenting progress to stakeholders.",
+    description: "Assisting in the development and optimization of AI/ML models for real-world applications. Working with large-scale datasets and implementing deep learning and NLP techniques to support AI solutions.",
     technologies: ["Python", "Machine Learning", "Deep Learning", "NLP", "Data Analysis"],
   },
   {
@@ -72,47 +70,42 @@ export const experiences: Experience[] = [
     company: "Saylani Trust (SMIT)",
     location: "Peshawar, Pakistan",
     duration: "Jan 2023 - Jan 2025",
-    description: "Currently enhancing skills in Python programming for data science and artificial intelligence. Gaining hands-on experience in data manipulation, visualization, machine learning, and AI techniques. Working on practical projects to apply theoretical knowledge in solving real-world problems using Python.",
+    description: "Enhancing skills in Python programming for data science and AI. Hands-on experience in data manipulation, visualization, machine learning, and AI techniques through practical projects.",
     technologies: ["Python", "Data Science", "Machine Learning", "AI", "Data Visualization"],
   }
 ];
 
+// Grouped skills (no progress bars, icon + label format handled by component)
 export const skills: Skill[] = [
-  // Programming Languages
-  { name: "Python", level: 95, category: "Programming Languages" },
-  { name: "SQL (Postgres)", level: 90, category: "Programming Languages" },
-  { name: "HTML/CSS", level: 85, category: "Programming Languages" },
-  { name: "PHP", level: 80, category: "Programming Languages" },
-  
-  // Frameworks & Tools
-  { name: "TensorFlow", level: 92, category: "Machine Learning" },
-  { name: "PyTorch", level: 88, category: "Machine Learning" },
-  { name: "Keras", level: 90, category: "Machine Learning" },
-  { name: "FastAI", level: 85, category: "Machine Learning" },
-  { name: "Scikit-learn", level: 90, category: "Machine Learning" },
-  { name: "OpenCV", level: 88, category: "Machine Learning" },
-  
-  // Development Tools
-  { name: "Jupyter Notebook", level: 95, category: "Data Science" },
-  { name: "Google Colab", level: 92, category: "Data Science" },
-  { name: "Anaconda", level: 88, category: "Data Science" },
-  { name: "VS Code", level: 90, category: "Programming Languages" },
-  { name: "PyCharm", level: 88, category: "Programming Languages" },
-  { name: "Git", level: 88, category: "Cloud & DevOps" },
-  { name: "Docker", level: 85, category: "Cloud & DevOps" },
-  { name: "GitHub", level: 90, category: "Cloud & DevOps" },
-  { name: "Kaggle Kernels", level: 85, category: "Data Science" },
-  { name: "Spyder", level: 82, category: "Data Science" },
-  
-  // Libraries
-  { name: "NumPy", level: 92, category: "Data Science" },
-  { name: "Pandas", level: 95, category: "Data Science" },
-  { name: "Matplotlib", level: 90, category: "Data Science" },
-  { name: "Seaborn", level: 88, category: "Data Science" },
-  { name: "NLTK", level: 85, category: "Machine Learning" },
-  { name: "spaCy", level: 83, category: "Machine Learning" },
-  { name: "Gensim", level: 80, category: "Machine Learning" },
-  { name: "Transformers", level: 85, category: "Machine Learning" }
+  // Languages
+  { name: "Python", level: 95, category: "Languages", icon: "code" },
+  { name: "SQL", level: 90, category: "Languages", icon: "database" },
+  { name: "JavaScript", level: 80, category: "Languages", icon: "code-2" },
+
+  // ML / DL
+  { name: "TensorFlow", level: 92, category: "ML/DL", icon: "brain" },
+  { name: "PyTorch", level: 88, category: "ML/DL", icon: "flame" },
+  { name: "Scikit-learn", level: 90, category: "ML/DL", icon: "sigma" },
+  { name: "Keras", level: 90, category: "ML/DL", icon: "layers" },
+
+  // NLP / LLM
+  { name: "LangChain", level: 88, category: "NLP/LLM", icon: "link" },
+  { name: "HuggingFace", level: 85, category: "NLP/LLM", icon: "smile" },
+  { name: "OpenAI API", level: 90, category: "NLP/LLM", icon: "sparkles" },
+  { name: "RAG", level: 85, category: "NLP/LLM", icon: "search" },
+
+  // Computer Vision
+  { name: "OpenCV", level: 88, category: "Computer Vision", icon: "eye" },
+  { name: "YOLO", level: 87, category: "Computer Vision", icon: "scan" },
+  { name: "CNNs", level: 90, category: "Computer Vision", icon: "image" },
+
+  // Tools & Cloud
+  { name: "Git", level: 90, category: "Tools & Cloud", icon: "git-branch" },
+  { name: "Docker", level: 85, category: "Tools & Cloud", icon: "container" },
+  { name: "AWS", level: 78, category: "Tools & Cloud", icon: "cloud" },
+  { name: "Streamlit", level: 92, category: "Tools & Cloud", icon: "layout-dashboard" },
+  { name: "FastAPI", level: 88, category: "Tools & Cloud", icon: "zap" },
+  { name: "Vercel", level: 85, category: "Tools & Cloud", icon: "triangle" },
 ];
 
 export const certifications: Certification[] = [
@@ -144,22 +137,20 @@ export const certifications: Certification[] = [
 
 export const projectCategories: ProjectCategory[] = [
   "All",
-  "Machine Learning",
-  "Deep Learning",
+  "NLP/LLM",
   "Computer Vision",
-  "Natural Language Processing",
-  "Data Visualization",
-  "Predictive Analytics",
+  "Full-Stack",
+  "Data Analysis",
 ];
 
 export const projects: Project[] = [
   {
     id: "realtime-object-detection",
     title: "Real-Time Object Detection with YOLOv8",
-    description: "Manual object spotting in images and video is slow and error-prone. I built a YOLOv8 detector deployed on Streamlit Cloud that lets users upload an image or use their camera to instantly identify multiple objects with bounding boxes and labels. Built with YOLOv8, OpenCV, Python, and Streamlit.",
+    description: "YOLOv8 detector on Streamlit Cloud for instant multi-object detection from uploads or webcam, built with YOLOv8, OpenCV, Python and Streamlit.",
     image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["YOLOv8", "Streamlit", "Computer Vision", "Deep Learning", "Python"],
-    category: ["Computer Vision", "Deep Learning", "Machine Learning"],
+    technologies: ["YOLOv8", "OpenCV", "Python", "Streamlit", "Deep Learning"],
+    category: ["Computer Vision"],
     githubUrl: "https://github.com/sajidrehman2/RealTimeObjectDetection",
     demoUrl: "https://realtimeobjectdetection-fenihksplv5ajwkkjkabzc.streamlit.app/",
     featured: true,
@@ -167,10 +158,10 @@ export const projects: Project[] = [
   {
     id: "linkedin-ai-assistant",
     title: "LinkedIn AI Assistant",
-    description: "Crafting good LinkedIn replies at scale is tedious and tone-sensitive. I built a FastAPI service that uses LLMs to draft replies, summarize conversations, and produce messages in multiple tones and languages from a single prompt. Built with Python, FastAPI, LangChain, and OpenAI-compatible LLM APIs.",
+    description: "FastAPI + LLM service that drafts LinkedIn replies, summaries, and multi-tone messages from a single prompt.",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "FastAPI", "LLM", "AI", "NLP"],
-    category: ["Natural Language Processing", "Machine Learning"],
+    technologies: ["Python", "FastAPI", "LangChain", "LLM", "NLP"],
+    category: ["NLP/LLM", "Full-Stack"],
     githubUrl: "https://github.com/sajidrehman2/linkedin-ai-assistant",
     demoUrl: "https://linkedin-ai-assistant-utfdpq76gnn4qo4whqbvsg.streamlit.app/",
     featured: true,
@@ -178,20 +169,20 @@ export const projects: Project[] = [
   {
     id: "bbc-news-classifier",
     title: "BBC News Detection",
-    description: "Categorizing large volumes of news articles by hand is impractical. I trained an NLP classifier on the BBC News dataset that automatically assigns each article to its correct topic, with feature engineering and model tuning to maximize accuracy. Built with Python, scikit-learn, TensorFlow/PyTorch, and classical NLP techniques.",
+    description: "NLP classifier trained on BBC News that auto-assigns each article to its correct topic via TF-IDF features and tuned models.",
     image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "TensorFlow", "PyTorch", "Scikit-Learn", "NLP"],
-    category: ["Machine Learning", "Natural Language Processing"],
+    technologies: ["Python", "TensorFlow", "Scikit-learn", "NLP", "TF-IDF"],
+    category: ["NLP/LLM", "Data Analysis"],
     githubUrl: "https://github.com/sajidrehman2/BBC-News-Article-Classifier/tree/main/BBC_headline_detector",
     featured: true,
   },
   {
     id: "pneumonia-detection",
     title: "Pneumonia Detection Using X-ray Images",
-    description: "Early pneumonia diagnosis from chest X-rays depends on scarce radiologist time. I trained a CNN (VGG16/ResNet) on a labeled X-ray dataset that classifies scans as normal or pneumonia and deployed it on Streamlit for real-time inference. Built with TensorFlow, Keras, OpenCV, and Python, with data augmentation and hyperparameter tuning for accuracy.",
+    description: "CNN (VGG16/ResNet) trained on chest X-rays and deployed on Streamlit to classify scans as normal or pneumonia in real time.",
     image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["TensorFlow", "Keras", "OpenCV", "Python", "CNN"],
-    category: ["Deep Learning", "Computer Vision", "Machine Learning"],
+    technologies: ["TensorFlow", "Keras", "OpenCV", "CNN", "Python"],
+    category: ["Computer Vision"],
     githubUrl: "https://github.com/sajidrehman2/pneumonia-detection-using-X-ray-images",
     demoUrl: "https://pneumonia-detection-using-x-ray-images-xuzapxbpoozurapphhr85gw.streamlit.app/",
     featured: true,
@@ -199,28 +190,28 @@ export const projects: Project[] = [
   {
     id: "movie-recommendation",
     title: "Movie Recommendation System",
-    description: "Users struggle to find movies that match their taste in huge catalogs. I built a content-based recommendation system that ranks similar films from metadata features like genre, cast, and keywords. Built with Python, Pandas, scikit-learn, and cosine similarity.",
+    description: "Content-based recommender that ranks similar films from metadata using cosine similarity over engineered features.",
     image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "Logistic Regression", "Random Forest", "XGBoost"],
-    category: ["Machine Learning", "Predictive Analytics"],
+    technologies: ["Python", "Pandas", "Scikit-learn", "NumPy"],
+    category: ["Data Analysis"],
     githubUrl: "https://github.com/sajidrehman2/Movierecomendationsystem",
   },
   {
     id: "loan-approval-predictor",
     title: "Loan Approval Prediction",
-    description: "Manual loan eligibility checks are slow and inconsistent. I built a machine-learning model that predicts loan approval from applicant features like income, credit history, and loan amount, with feature engineering and hyperparameter tuning to lift accuracy. Built with Python, scikit-learn, Logistic Regression, Random Forest, and XGBoost.",
+    description: "ML model predicting loan approval from applicant features with feature engineering, ensembles and hyperparameter tuning.",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "Logistic Regression", "Random Forest", "XGBoost"],
-    category: ["Machine Learning", "Predictive Analytics"],
+    technologies: ["Python", "Scikit-learn", "Random Forest", "XGBoost"],
+    category: ["Data Analysis"],
     githubUrl: "https://github.com/sajidrehman2/Data-science-and-Machine-learning-project/tree/main/Project%20of%20LoanApproval%20Prediction",
   },
   {
     id: "pizza-llm-bot",
     title: "Pizza LLM Bot",
-    description: "Ordering pizza through static menus is rigid and impersonal. I built a conversational LLM chatbot that takes natural-language orders, recommends items based on preferences, and handles multi-turn questions about the menu. Built with Python, LangChain, an OpenAI-compatible LLM, and Streamlit.",
+    description: "Conversational LLM chatbot that takes natural-language pizza orders and handles multi-turn menu questions, built with LangChain + Streamlit.",
     image: pizzaLlmBotImage,
-    technologies: ["Python", "LLM", "Streamlit", "NLP", "Chatbot"],
-    category: ["Natural Language Processing", "Machine Learning"],
+    technologies: ["Python", "LangChain", "LLM", "Streamlit", "Chatbot"],
+    category: ["NLP/LLM", "Full-Stack"],
     githubUrl: "https://github.com/sajidrehman2/pizza-llm-bot",
     demoUrl: "https://pizza-llm-bot-dv3dmv5ahudpp3vkjlkwrr.streamlit.app/",
     featured: true,
@@ -228,21 +219,21 @@ export const projects: Project[] = [
   {
     id: "ai-hr-hiring-assistant",
     title: "AI HR Hiring Assistant",
-    description: "HR teams burn hours sorting through resumes for each role. I built a Streamlit app that parses uploaded resumes, scores candidates against a job description using NLP, and surfaces a ranked shortlist with reasoning. Built with Python, Streamlit, spaCy, and LLM-assisted evaluation.",
+    description: "Streamlit app that parses resumes, scores candidates against a JD with NLP + LLM evaluation and returns a ranked shortlist.",
     image: aiHrHiringAssistantImage,
-    technologies: ["Python", "Streamlit", "NLP", "AI", "Machine Learning"],
-    category: ["Natural Language Processing", "Machine Learning"],
+    technologies: ["Python", "Streamlit", "spaCy", "LLM", "NLP"],
+    category: ["NLP/LLM", "Full-Stack"],
     githubUrl: "https://github.com/sajidrehman2/Sajid-AI-HR-Hiring-Assistant",
     demoUrl: "https://sajid-ai-hr-hiring-assistant-zz4pmgasreecpe8mankqol.streamlit.app/",
     featured: true,
   },
   {
     id: "smart-hostel-manager",
-    title: "Smart Hostel Manager", 
-    description: "Small hostels still juggle bookings and billing across spreadsheets. I built a Streamlit-based management system that handles room allocation, real-time occupancy, automated billing, and basic analytics in one dashboard. Built with Python, Streamlit, Pandas, and SQLite.",
+    title: "Smart Hostel Manager",
+    description: "Streamlit dashboard for hostel ops: room allocation, real-time occupancy, automated billing and analytics over SQLite.",
     image: smartHostelManagerImage,
-    technologies: ["Python", "Streamlit", "Data Analytics", "Management System", "Automation"],
-    category: ["Data Visualization", "Predictive Analytics", "Machine Learning"],
+    technologies: ["Python", "Streamlit", "Pandas", "SQLite", "Automation"],
+    category: ["Full-Stack", "Data Analysis"],
     githubUrl: "https://github.com/sajidrehman2/sajid-smart-hostel-manager",
     demoUrl: "https://sajid-smart-hostel-manager-q3shsmepqrsk3iirbn7m5t.streamlit.app/",
     featured: true,
@@ -250,10 +241,10 @@ export const projects: Project[] = [
   {
     id: "sajids-ai-diner",
     title: "Sajid's AI Diner (SmartDineAI)",
-    description: "Restaurants need a faster way to take orders and answer menu questions online. I built a full-stack AI dining assistant — Next.js frontend on Vercel, FastAPI/LLM backend on Render, plus a Streamlit demo — that gives menu recommendations, takes orders, and chats with diners. Built with Next.js, FastAPI, Python, LLMs, Render, and Vercel.",
+    description: "Full-stack AI dining assistant: Next.js frontend on Vercel, FastAPI/LLM backend on Render, plus a Streamlit demo for orders & menu Q&A.",
     image: sajidsAiDinerImage,
-    technologies: ["Next.js", "FastAPI", "Python", "AI", "LLM", "Render", "Vercel"],
-    category: ["Natural Language Processing", "Machine Learning"],
+    technologies: ["Next.js", "FastAPI", "LLM", "Vercel", "Render"],
+    category: ["Full-Stack", "NLP/LLM"],
     githubUrl: "https://github.com/sajidrehman2/sajids-ai-diner",
     demoUrl: "https://smartdineai.vercel.app/",
     featured: true,
@@ -261,122 +252,78 @@ export const projects: Project[] = [
   {
     id: "sentiment-analysis",
     title: "Sentiment Analysis on Product Reviews",
-    description: "Brands need fast signal from thousands of product reviews. I built an NLP pipeline that classifies review sentiment using TF-IDF, Word2Vec, and an LSTM, with a comparison of classical vs. deep approaches. Built with Python, scikit-learn, Gensim, and TensorFlow/Keras.",
+    description: "NLP pipeline classifying review sentiment with TF-IDF, Word2Vec and an LSTM, comparing classical vs. deep approaches.",
     image: "https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "TF-IDF", "Word2Vec", "LSTM", "NLP"],
-    category: ["Natural Language Processing", "Machine Learning"],
+    technologies: ["Python", "TF-IDF", "Word2Vec", "LSTM", "Keras"],
+    category: ["NLP/LLM"],
     githubUrl: "",
   },
   {
     id: "fake-news-detector",
     title: "Fake News Detection",
-    description: "Misinformation spreads faster than humans can fact-check. I built an NLP classifier that flags fake-news articles using Logistic Regression, Random Forest, and Transformer-based models, then compared their accuracy and trade-offs. Built with Python, scikit-learn, and Hugging Face Transformers.",
+    description: "NLP classifier flagging fake news with Logistic Regression, Random Forest and Transformer models, with accuracy trade-off analysis.",
     image: "https://images.unsplash.com/photo-1590070585459-e5b3a84a4421?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "Logistic Regression", "Random Forest", "Transformers"],
-    category: ["Natural Language Processing", "Machine Learning"],
+    technologies: ["Python", "Scikit-learn", "Transformers", "HuggingFace", "NLP"],
+    category: ["NLP/LLM"],
     githubUrl: "",
   },
   {
     id: "spotify-trackers",
     title: "Spotify Track Analysis",
-    description: "Music producers want to know what makes tracks chart. I analyzed Spotify audio features (energy, danceability, tempo, valence) across thousands of tracks and visualized the patterns that correlate with popularity. Built with Python, Pandas, Seaborn, and Matplotlib.",
+    description: "EDA of Spotify audio features (energy, danceability, tempo, valence) and the patterns correlating with track popularity.",
     image: "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "Pandas", "Seaborn", "Matplotlib", "Data Analysis"],
-    category: ["Data Visualization", "Machine Learning"],
+    technologies: ["Python", "Pandas", "Seaborn", "Matplotlib"],
+    category: ["Data Analysis"],
     githubUrl: "https://github.com/sajidrehman2/Data-science-and-Machine-learning-project/tree/main/Project%20of%20Spotify%20Trackers",
   },
   {
     id: "house-price-prediction",
     title: "House Price Prediction",
-    description: "Pricing a home is hard when many features interact non-linearly. I built a regression model that predicts house prices from property and neighborhood features, using feature engineering and ensemble methods to reduce error. Built with Python, scikit-learn, XGBoost, Pandas, and NumPy.",
+    description: "Regression model predicting house prices via feature engineering + ensemble methods (XGBoost) to reduce error.",
     image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "Scikit-Learn", "XGBoost", "Pandas", "NumPy"],
-    category: ["Machine Learning", "Predictive Analytics"],
+    technologies: ["Python", "Scikit-learn", "XGBoost", "Pandas", "NumPy"],
+    category: ["Data Analysis"],
     githubUrl: "https://github.com/sajidrehman2/Data-science-and-Machine-learning-project/tree/main/HousePrice%20Prediction",
   },
   {
     id: "cement-strength",
     title: "Cement Strength Predictor",
-    description: "Cement strength is critical for construction safety but slow to test physically. I built a regression model that predicts compressive strength from mix composition and curing age, helping QC teams catch weak batches earlier. Built with Python, scikit-learn, Pandas, and NumPy.",
+    description: "Regression model predicting compressive strength from mix composition and curing age so QC catches weak batches earlier.",
     image: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "Scikit-Learn", "Pandas", "NumPy", "Regression"],
-    category: ["Machine Learning", "Predictive Analytics"],
+    technologies: ["Python", "Scikit-learn", "Pandas", "NumPy"],
+    category: ["Data Analysis"],
     githubUrl: "https://github.com/sajidrehman2/Cement_strength",
   },
   {
     id: "digit-recognition",
     title: "Handwritten Digit Recognition",
-    description: "Reading handwritten digits is a foundational computer-vision problem with real-world uses like postal sorting. I built a CNN classifier trained on MNIST that achieves high accuracy and runs predictions in real time on user-drawn input. Built with TensorFlow, Keras, Python, NumPy, and OpenCV.",
+    description: "CNN classifier trained on MNIST with real-time prediction on user-drawn digits, built with TensorFlow + Keras.",
     image: "https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["TensorFlow", "Keras", "Python", "NumPy", "OpenCV"],
-    category: ["Deep Learning", "Computer Vision"],
+    technologies: ["TensorFlow", "Keras", "CNN", "NumPy", "OpenCV"],
+    category: ["Computer Vision"],
     githubUrl: "https://github.com/sajidrehman2/Handwritten-Digit-Recognition",
   }
 ];
 
 export const socialLinks: SocialLink[] = [
-  {
-    name: "GitHub",
-    url: "https://github.com/sajidrehman2",
-    icon: "github",
-  },
-  {
-    name: "LinkedIn",
-    url: "https://www.linkedin.com/in/sajid-rehman-b14474265/",
-    icon: "linkedin",
-  },
-  {
-    name: "Twitter",
-    url: "https://x.com/SajidRe89262888",
-    icon: "twitter",
-  },
-  {
-    name: "Kaggle",
-    url: "https://www.kaggle.com/itsajidrehman",
-    icon: "bar-chart",
-  },
-  {
-    name: "Medium",
-    url: "https://medium.com/@username",
-    icon: "feather",
-  },
+  { name: "GitHub", url: "https://github.com/sajidrehman2", icon: "github" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/sajid-rehman-b14474265/", icon: "linkedin" },
+  { name: "Kaggle", url: "https://www.kaggle.com/itsajidrehman", icon: "bar-chart" },
+  { name: "Email", url: "mailto:sajid.rehmanoffical95001@gmail.com", icon: "mail" },
 ];
 
-export const testimonials: Testimonial[] = [
-  {
-    name: "Dr. Sarah Chen",
-    role: "Lead Data Scientist",
-    company: "Innovate Inc.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    text: "One of the most talented AI engineers I've had the pleasure to work with. Their innovative approach to problem-solving and deep technical knowledge made our project a tremendous success.",
-  },
-  {
-    name: "Michael Rodriguez",
-    role: "CTO",
-    company: "TechFuture Solutions",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    text: "Their expertise in deep learning algorithms transformed our product. They have the rare ability to explain complex technical concepts in simple terms that everyone can understand.",
-  },
-  {
-    name: "Emily Johnson",
-    role: "VP of Engineering",
-    company: "DataVision Analytics",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    text: "A remarkable talent in the AI field. Their contributions to our machine learning infrastructure have been invaluable, and their passion for continuous learning is truly inspirational.",
-  },
-];
+export const testimonials: Testimonial[] = [];
 
 export const personalInfo = {
   name: "Sajid Rehman",
-  title: "AI Engineer & Data Scientist",
-  tagline: "Building Intelligent Systems with Data & AI",
+  title: "AI & Data Science Engineer",
+  headline: "AI & Data Science Engineer | Building intelligent systems with Python, LLMs & Computer Vision",
+  subtitle: "BS IT Student @ University of Agriculture Peshawar | 16+ Projects | Available for Freelance & Internships",
+  tagline: "Building intelligent systems with Python, LLMs & Computer Vision",
   email: "sajid.rehmanoffical95001@gmail.com",
   phone: "+923038047795",
-  location: "Peshawar, Pakistan, 25000",
-  bio: `I'm an AI Engineer and Data Scientist based in Peshawar, Pakistan, with 2+ years of hands-on experience designing and shipping machine learning, deep learning, and NLP systems. I'm currently completing my B.S. in Information Technology at Agriculture University Peshawar, alongside specialized training in Python for Data Science & AI at Saylani Trust (SMIT).
-
-My work spans computer vision, natural language processing, and predictive analytics — from training CNNs on medical X-rays to building LLM-powered chatbots and full-stack AI products with FastAPI, Streamlit, Next.js, and Render. I've delivered end-to-end pipelines for clients and internal teams at Saylani Welfare Trust and Code Alpha, covering everything from data prep and model training to deployment and monitoring.
-
-I approach AI with curiosity, creativity, and responsibility — focused on building systems that are accurate, interpretable, and genuinely useful. I care most about applying AI to healthcare, education, and real-world automation. Outside of work, I'm usually exploring new ML papers, contributing to open-source projects, or sharpening my data skills on Kaggle.`,
-  resumeUrl: "/Sajid_Rehman_Resume.pdf"
+  location: "Peshawar, Pakistan",
+  bio: `AI & Data Science Engineer based in Peshawar, Pakistan, with 2+ years building ML, deep learning and LLM-powered products. Currently finishing my BS in IT at the University of Agriculture Peshawar while shipping 16+ end-to-end projects across computer vision, NLP and full-stack AI. I focus on practical, deployable systems — from CNN medical imaging to LangChain chatbots and FastAPI services.`,
+  resumeUrl: "/Sajid_Rehman_Resume.pdf",
+  cvUrl: "/Sajid_Rehman_CV.pdf",
 };

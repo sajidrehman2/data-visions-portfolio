@@ -1,8 +1,28 @@
-
 import { useState, useRef, useEffect } from 'react';
 import { projects, projectCategories } from '@/data';
 import type { ProjectCategory } from '@/types';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, Image as ImageIcon } from 'lucide-react';
+
+const ProjectThumb = ({ src, alt, title }: { src: string; alt: string; title: string }) => {
+  const [failed, setFailed] = useState(false);
+  if (failed || !src) {
+    return (
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-secondary to-background text-center p-6">
+        <ImageIcon className="text-primary/60 mb-3" size={36} />
+        <span className="text-sm font-semibold text-foreground/90 line-clamp-3">{title}</span>
+      </div>
+    );
+  }
+  return (
+    <img
+      src={src}
+      alt={alt}
+      loading="lazy"
+      onError={() => setFailed(true)}
+      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+    />
+  );
+};
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("All");
@@ -19,48 +39,28 @@ const Projects = () => {
       },
       { threshold: 0.1 }
     );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+    if (sectionRef.current) observer.observe(sectionRef.current);
+    return () => observer.disconnect();
   }, []);
 
   const filteredProjects = activeCategory === "All"
     ? projects
-    : projects.filter(project => project.category.includes(activeCategory));
+    : projects.filter(p => p.category.includes(activeCategory));
 
   return (
-    <section 
-      id="projects" 
-      ref={sectionRef}
-      className="section-spacing bg-background relative overflow-hidden"
-    >
-      {/* Background decorations */}
+    <section id="projects" ref={sectionRef} className="section-spacing bg-background relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-secondary/5 z-0"></div>
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className={`opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}>
-          <div className="max-w-xl mx-auto text-center mb-16">
-            <div className="inline-block px-3 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">
-              My Work
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Featured Projects
-            </h2>
-            <p className="text-foreground/70">
-              A showcase of my data science and AI projects, demonstrating real-world
-              applications and problem-solving capabilities.
-            </p>
+          <div className="max-w-xl mx-auto text-center mb-12">
+            <div className="inline-block px-3 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">My Work</div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <p className="text-foreground/70">A showcase of my AI, ML and full-stack data projects with real deployments.</p>
           </div>
         </div>
 
-        {/* Category filters */}
+        {/* Filter bar */}
         <div className={`flex flex-wrap justify-center gap-2 mb-12 opacity-0 ${isVisible ? 'animate-fade-in animate-delay-100' : ''}`}>
           {projectCategories.map((category) => (
             <button
@@ -77,76 +77,68 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* Projects grid */}
+        {/* Grid: 1 col mobile, 2 tablet, 3 desktop, equal-height cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project, index) => (
-            <div 
+            <div
               key={project.id}
-              className={`opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}
-              style={{ animationDelay: `${200 + (index % 6) * 100}ms` }}
+              className={`opacity-0 ${isVisible ? 'animate-fade-in' : ''} h-full`}
+              style={{ animationDelay: `${200 + (index % 6) * 80}ms` }}
             >
-              <div className="group bg-secondary/30 border border-white/10 rounded-lg overflow-hidden transition-all hover:translate-y-[-5px] hover:shadow-xl">
-                <div className="relative h-56 overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-0 group-hover:opacity-70 transition-opacity z-10"></div>
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  
+              <article className="group h-full flex flex-col bg-secondary/30 border border-white/10 rounded-lg overflow-hidden transition-all hover:-translate-y-1 hover:shadow-xl hover:border-primary/40">
+                {/* 16:9 thumbnail */}
+                <div className="relative w-full aspect-video overflow-hidden bg-secondary">
+                  <ProjectThumb src={project.image} alt={project.title} title={project.title} />
                   {project.featured && (
-                    <div className="absolute top-4 left-4 px-3 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full z-20">
+                    <div className="absolute top-3 left-3 px-2.5 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full z-20">
                       Featured
                     </div>
                   )}
-                  
-                  <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 flex gap-2 z-20">
-                    {project.githubUrl && (
-                      <a 
-                        href={project.githubUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="p-2 bg-muted text-foreground rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
-                        aria-label={`View ${project.title} on GitHub`}
-                      >
-                        <Github size={20} />
-                      </a>
-                    )}
-                    {project.demoUrl && (
-                      <a 
-                        href={project.demoUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="p-2 bg-muted text-foreground rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
-                        aria-label={`View ${project.title} demo`}
-                      >
-                        <ExternalLink size={20} />
-                      </a>
-                    )}
-                  </div>
                 </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+
+                <div className="p-5 flex flex-col flex-1">
+                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2 min-h-[3.5rem]">
                     {project.title}
                   </h3>
-                  <p className="text-foreground/70 mb-4 line-clamp-3">
+                  <p className="text-sm text-foreground/70 mb-4 line-clamp-2 min-h-[2.5rem]">
                     {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.slice(0, 3).map((tech, i) => (
-                      <span key={i} className="px-2 py-1 bg-secondary text-xs text-foreground/80 rounded-full">
+                  <div className="flex flex-wrap gap-1.5 mb-4">
+                    {project.technologies.slice(0, 5).map((tech, i) => (
+                      <span key={i} className="px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-full border border-primary/20">
                         {tech}
                       </span>
                     ))}
-                    {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-secondary text-xs text-foreground/80 rounded-full">
-                        +{project.technologies.length - 3}
-                      </span>
+                  </div>
+
+                  <div className="mt-auto flex items-center gap-2 pt-3 border-t border-white/5">
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-secondary text-foreground/80 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
+                        aria-label={`View ${project.title} on GitHub`}
+                        title="GitHub"
+                      >
+                        <Github size={18} />
+                      </a>
+                    )}
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-2 bg-secondary text-foreground/80 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
+                        aria-label={`View ${project.title} live demo`}
+                        title="Live Demo"
+                      >
+                        <ExternalLink size={18} />
+                      </a>
                     )}
                   </div>
                 </div>
-              </div>
+              </article>
             </div>
           ))}
         </div>

@@ -116,18 +116,50 @@ const About = () => {
           {/* Tab content */}
           <div className={`opacity-0 ${isVisible ? 'animate-fade-in animate-delay-200' : ''}`}>
             {activeTab === 'bio' && (
-              <div className="space-y-6">
-                <p className="text-lg leading-relaxed text-foreground/90 whitespace-pre-line">
-                  {personalInfo.bio}
-                </p>
-                <div className="flex flex-wrap gap-4 mt-8">
+              <div className="space-y-8">
+                <div className="flex flex-col md:flex-row gap-8 items-start">
+                  <div className="flex-shrink-0 mx-auto md:mx-0">
+                    <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-primary/40 ring-4 ring-primary/10 shadow-[0_0_40px_-10px_hsl(var(--primary)/0.5)]">
+                      <img
+                        alt={personalInfo.name}
+                        className="w-full h-full object-cover"
+                        src="/lovable-uploads/84173685-acc4-4fa5-8b0f-ede1a61c4fa1.jpg"
+                        onError={(e) => {
+                          const t = e.currentTarget;
+                          t.style.display = 'none';
+                          t.parentElement!.innerHTML = `<div class="w-full h-full flex items-center justify-center bg-secondary text-3xl font-bold text-primary">SR</div>`;
+                        }}
+                      />
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <p className="text-base md:text-lg leading-relaxed text-foreground/90">
+                      {personalInfo.bio}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  {[
+                    { label: "16+ Projects", sub: "Shipped end-to-end" },
+                    { label: "2+ Years Experience", sub: "ML / DL / NLP" },
+                    { label: "BS IT Final Year", sub: "Univ. of Agriculture Peshawar" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="bg-secondary/30 border border-primary/20 rounded-lg p-5 text-center hover:border-primary/50 transition-colors">
+                      <p className="text-lg font-bold text-primary">{stat.label}</p>
+                      <p className="text-xs text-foreground/60 mt-1">{stat.sub}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="flex flex-wrap gap-4">
                   <div className="bg-secondary/30 border border-white/10 rounded-lg p-5 flex-1 min-w-[200px]">
                     <h3 className="text-sm text-foreground/60 mb-2">Location</h3>
                     <p className="font-medium">{personalInfo.location}</p>
                   </div>
                   <div className="bg-secondary/30 border border-white/10 rounded-lg p-5 flex-1 min-w-[200px]">
                     <h3 className="text-sm text-foreground/60 mb-2">Email</h3>
-                    <p className="font-medium">{personalInfo.email}</p>
+                    <p className="font-medium break-all">{personalInfo.email}</p>
                   </div>
                 </div>
               </div>
