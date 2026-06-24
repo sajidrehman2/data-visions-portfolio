@@ -10,32 +10,33 @@
   :root {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
-    
+
     --card: 240 10% 3.9%;
     --card-foreground: 0 0% 98%;
-    
+
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
-    
-    --primary: 142 72% 50%;
-    --primary-foreground: 240 5.9% 10%;
-    
+
+    /* Single consistent accent: #3B82F6 (blue-500) */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
-    
+
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    
-    --accent: 142 70% 45%;
-    --accent-foreground: 0 0% 98%;
-    
+
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    
+
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 142 72% 50%;
-    
+    --ring: 217 91% 60%;
+
     --radius: 0.5rem;
   }
 }
@@ -44,25 +45,24 @@
   * {
     @apply border-border selection:bg-primary/30 selection:text-white;
   }
-  
+
   html {
     @apply scroll-smooth;
   }
-  
+
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
-  
-  /* Hide scrollbar but allow scrolling */
+
   body::-webkit-scrollbar {
     width: 6px;
   }
-  
+
   body::-webkit-scrollbar-track {
     @apply bg-muted/30;
   }
-  
+
   body::-webkit-scrollbar-thumb {
     @apply bg-primary/50 rounded-full;
   }
@@ -72,28 +72,28 @@
   .text-wrap-balance {
     text-wrap: balance;
   }
-  
+
   .text-gradient {
     @apply bg-gradient-to-tr from-primary via-primary/80 to-accent bg-clip-text text-transparent;
   }
-  
+
   .glass-panel {
     @apply backdrop-blur-md bg-white/5 border border-white/10 shadow-lg;
   }
-  
+
   .section-spacing {
     @apply py-16 md:py-24;
   }
-  
+
   .text-shadow {
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   }
-  
+
   .link-underline {
     position: relative;
     display: inline-block;
   }
-  
+
   .link-underline::after {
     content: '';
     position: absolute;
@@ -106,43 +106,33 @@
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-  
+
   .link-underline:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
-  
-  .animate-delay-100 {
-    animation-delay: 100ms;
+
+  /* Reveal-on-scroll: starts hidden, animates in when .reveal-in is added */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
   }
-  
-  .animate-delay-200 {
-    animation-delay: 200ms;
+  .reveal.reveal-in {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .animate-delay-300 {
-    animation-delay: 300ms;
-  }
-  
-  .animate-delay-400 {
-    animation-delay: 400ms;
-  }
-  
-  .animate-delay-500 {
-    animation-delay: 500ms;
-  }
-  
-  .animate-delay-600 {
-    animation-delay: 600ms;
-  }
-  
-  .animate-delay-700 {
-    animation-delay: 700ms;
-  }
-  
-  .animate-delay-800 {
-    animation-delay: 800ms;
-  }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+  .animate-delay-500 { animation-delay: 500ms; }
+  .animate-delay-600 { animation-delay: 600ms; }
+  .animate-delay-700 { animation-delay: 700ms; }
+  .animate-delay-800 { animation-delay: 800ms; }
 }
 
 #root {

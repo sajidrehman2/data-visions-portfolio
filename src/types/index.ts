@@ -59,6 +59,8 @@ export interface Project {
   demoUrl?: string;
   githubUrl?: string;
   featured?: boolean;
+  /** Show in the top "Featured Projects" horizontal cards row */
+  featuredHero?: boolean;
 }
 
 export type ProjectCategory =
