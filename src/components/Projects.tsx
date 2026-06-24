@@ -115,7 +115,7 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>('All');
 
   // Re-run reveal observer when filter changes (new cards mount)
-  useRevealOnScroll('.reveal');
+  useRevealOnScroll('.reveal', [activeCategory]);
 
   const featured = projects.filter((p) => p.featuredHero);
   const filteredProjects =
