@@ -1,12 +1,12 @@
-
 import React from 'react';
 import { Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { useToast } from '@/hooks/use-toast';
+import resumePreview from '@/assets/resume-preview.png.asset.json';
 
 const Resume = () => {
   const { toast } = useToast();
-  const resumeImageUrl = '/lovable-uploads/d05b1788-b238-4c4e-9926-c6ca14a71ace.png';
+  const resumeImageUrl = resumePreview.url;
   const pdfUrl = '/Sajid_Rehman_Resume.pdf';
 
   const handleDownload = () => {
