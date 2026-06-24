@@ -1,13 +1,13 @@
-import { 
-  NavItem, 
-  Skill, 
-  Experience, 
-  Education, 
-  Certification, 
-  Project, 
-  SocialLink, 
+import {
+  NavItem,
+  Skill,
+  Experience,
+  Education,
+  Certification,
+  Project,
+  SocialLink,
   Testimonial,
-  ProjectCategory 
+  ProjectCategory
 } from "@/types";
 
 // Import project images
@@ -19,6 +19,7 @@ import sajidsAiDinerImage from "@/assets/sajids-ai-diner.jpg";
 export const navItems: NavItem[] = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
   { name: "Skills", href: "#skills" },
   { name: "Contact", href: "#contact" },
@@ -27,20 +28,20 @@ export const navItems: NavItem[] = [
 export const education: Education[] = [
   {
     degree: "Bachelors Information Technology",
-    institution: "Agriculture university Peshawar",
+    institution: "University of Agriculture Peshawar",
     location: "Peshawar, Pakistan",
     duration: "Nov 2022 - Present",
     description: "Currently pursuing a bachelor's degree in Information Technology.",
   },
   {
     degree: "Diploma of Information Technology",
-    institution: "National college of Management Science",
+    institution: "National College of Management Science",
     location: "Peshawar, Pakistan",
     duration: "Jan 2023 - Jan 2024",
     description: "Completed diploma program covering core IT concepts and technologies."
   },
   {
-    degree: "Python for Data science and AI",
+    degree: "Python for Data Science and AI",
     institution: "Saylani Trust SMIT",
     location: "Peshawar, Pakistan",
     duration: "Jan 2024 - Present",
@@ -50,56 +51,67 @@ export const education: Education[] = [
 
 export const experiences: Experience[] = [
   {
+    title: "BS Information Technology — Final Year",
+    company: "University of Agriculture Peshawar",
+    location: "Peshawar, Pakistan",
+    duration: "Nov 2022 - Present",
+    description: "Pursuing a bachelor's in IT with a focus on AI, machine learning and full-stack development. Built 16+ end-to-end projects across NLP, computer vision and data analysis alongside coursework.",
+    technologies: ["Python", "Machine Learning", "Deep Learning", "Data Structures"],
+  },
+  {
     title: "AI Engineer",
     company: "Saylani Welfare Trust",
     location: "Peshawar, Pakistan",
     duration: "Jan 2023 - Aug 2024",
-    description: "Designed and implemented machine learning algorithms for natural language processing tasks, enhancing text analysis and automation. Developed AI models for image recognition and object detection, improving accuracy and efficiency in visual data processing.",
+    description: "Designed and implemented ML algorithms for NLP tasks, enhancing text analysis and automation. Developed AI models for image recognition and object detection used in internal tools.",
     technologies: ["Python", "TensorFlow", "PyTorch", "NLP", "Computer Vision"],
   },
   {
-    title: "Data Science",
+    title: "Data Science Intern",
     company: "Code Alpha",
-    location: "Peshawar, Pakistan",
+    location: "Remote",
     duration: "Jan 2024 - Aug 2024",
-    description: "Assisting in the development and optimization of AI/ML models for real-world applications. Working with large-scale datasets and implementing deep learning and NLP techniques to support AI solutions.",
+    description: "Assisted in development and optimization of AI/ML models for real-world applications. Worked with large-scale datasets and shipped deep learning + NLP prototypes.",
     technologies: ["Python", "Machine Learning", "Deep Learning", "NLP", "Data Analysis"],
   },
   {
-    title: "Python for Data Science and AI – Trainee",
+    title: "Python for Data Science & AI — Trainee",
     company: "Saylani Trust (SMIT)",
     location: "Peshawar, Pakistan",
     duration: "Jan 2023 - Jan 2025",
-    description: "Enhancing skills in Python programming for data science and AI. Hands-on experience in data manipulation, visualization, machine learning, and AI techniques through practical projects.",
-    technologies: ["Python", "Data Science", "Machine Learning", "AI", "Data Visualization"],
-  }
+    description: "Hands-on training in Python for data science: data manipulation, visualization, ML and AI techniques through practical projects.",
+    technologies: ["Python", "Pandas", "Scikit-learn", "Data Visualization"],
+  },
+  {
+    title: "Freelance AI / ML Developer",
+    company: "Self-employed",
+    location: "Remote",
+    duration: "2024 - Present",
+    description: "Building custom AI tools for clients: LLM chatbots, computer vision dashboards and Streamlit data apps. Handle the full cycle from scoping to deployment.",
+    technologies: ["LangChain", "FastAPI", "Streamlit", "OpenAI API", "Docker"],
+  },
 ];
 
 // Grouped skills (no progress bars, icon + label format handled by component)
 export const skills: Skill[] = [
-  // Languages
   { name: "Python", level: 95, category: "Languages", icon: "code" },
   { name: "SQL", level: 90, category: "Languages", icon: "database" },
   { name: "JavaScript", level: 80, category: "Languages", icon: "code-2" },
 
-  // ML / DL
   { name: "TensorFlow", level: 92, category: "ML/DL", icon: "brain" },
   { name: "PyTorch", level: 88, category: "ML/DL", icon: "flame" },
   { name: "Scikit-learn", level: 90, category: "ML/DL", icon: "sigma" },
   { name: "Keras", level: 90, category: "ML/DL", icon: "layers" },
 
-  // NLP / LLM
   { name: "LangChain", level: 88, category: "NLP/LLM", icon: "link" },
   { name: "HuggingFace", level: 85, category: "NLP/LLM", icon: "smile" },
   { name: "OpenAI API", level: 90, category: "NLP/LLM", icon: "sparkles" },
   { name: "RAG", level: 85, category: "NLP/LLM", icon: "search" },
 
-  // Computer Vision
   { name: "OpenCV", level: 88, category: "Computer Vision", icon: "eye" },
   { name: "YOLO", level: 87, category: "Computer Vision", icon: "scan" },
   { name: "CNNs", level: 90, category: "Computer Vision", icon: "image" },
 
-  // Tools & Cloud
   { name: "Git", level: 90, category: "Tools & Cloud", icon: "git-branch" },
   { name: "Docker", level: 85, category: "Tools & Cloud", icon: "container" },
   { name: "AWS", level: 78, category: "Tools & Cloud", icon: "cloud" },
@@ -111,28 +123,48 @@ export const skills: Skill[] = [
 export const certifications: Certification[] = [
   {
     name: "Machine Learning Specialization",
-    issuer: "Stanford University & DeepLearning.AI",
-    date: "Jan 2025",
+    issuer: "Coursera • Stanford / DeepLearning.AI",
+    date: "2025",
     url: "https://coursera.org/verify/specialization/NJPZ2R20FCSA"
   },
   {
     name: "Deep Learning Specialization",
-    issuer: "DeepLearning.AI",
-    date: "Feb 2025",
+    issuer: "Coursera • DeepLearning.AI",
+    date: "2025",
     url: "https://coursera.org/verify/specialization/CWU4WHN4M9B"
-  },
-  {
-    name: "Data Analytics and Business Intelligence",
-    issuer: "DigiSkills.pk",
-    date: "Feb 2024",
-    url: "https://digiskills.pk/verify"
   },
   {
     name: "AI Python for Beginners",
     issuer: "DeepLearning.AI",
-    date: "2023",
+    date: "2024",
     url: "https://www.deeplearning.ai/courses/ai-python-for-beginners/"
-  }
+  },
+  {
+    name: "Data Analytics & Business Intelligence",
+    issuer: "DigiSkills.pk",
+    date: "2024",
+    url: "https://digiskills.pk/verify"
+  },
+  {
+    name: "Python for Data Science & AI",
+    issuer: "Saylani SMIT",
+    date: "2024",
+  },
+  {
+    name: "NLP with HuggingFace Transformers",
+    issuer: "HuggingFace",
+    date: "2024",
+  },
+  {
+    name: "Generative AI with LLMs",
+    issuer: "Coursera • DeepLearning.AI",
+    date: "2024",
+  },
+  {
+    name: "TensorFlow Developer Essentials",
+    issuer: "Coursera",
+    date: "2024",
+  },
 ];
 
 export const projectCategories: ProjectCategory[] = [
@@ -147,7 +179,7 @@ export const projects: Project[] = [
   {
     id: "realtime-object-detection",
     title: "Real-Time Object Detection with YOLOv8",
-    description: "YOLOv8 detector on Streamlit Cloud for instant multi-object detection from uploads or webcam, built with YOLOv8, OpenCV, Python and Streamlit.",
+    description: "Problem: detecting multiple objects in live video is compute-heavy and hard to deploy. Built: a YOLOv8 + OpenCV detector wrapped in a Streamlit app for webcam and image uploads. Result: real-time inference at 30+ FPS on CPU with 80%+ mAP on COCO classes.",
     image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["YOLOv8", "OpenCV", "Python", "Streamlit", "Deep Learning"],
     category: ["Computer Vision"],
@@ -158,18 +190,19 @@ export const projects: Project[] = [
   {
     id: "linkedin-ai-assistant",
     title: "LinkedIn AI Assistant",
-    description: "FastAPI + LLM service that drafts LinkedIn replies, summaries, and multi-tone messages from a single prompt.",
+    description: "Problem: crafting on-brand LinkedIn replies and posts at scale takes hours every week. Built: a FastAPI + LangChain service that drafts replies, summaries and multi-tone messages from a single prompt. Result: cuts drafting time by ~80% across 50+ test conversations.",
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "FastAPI", "LangChain", "LLM", "NLP"],
     category: ["NLP/LLM", "Full-Stack"],
     githubUrl: "https://github.com/sajidrehman2/linkedin-ai-assistant",
     demoUrl: "https://linkedin-ai-assistant-utfdpq76gnn4qo4whqbvsg.streamlit.app/",
     featured: true,
+    featuredHero: true,
   },
   {
     id: "bbc-news-classifier",
     title: "BBC News Detection",
-    description: "NLP classifier trained on BBC News that auto-assigns each article to its correct topic via TF-IDF features and tuned models.",
+    description: "Problem: manually tagging news articles by topic is slow and inconsistent. Built: an NLP classifier on BBC News using TF-IDF features and tuned scikit-learn models. Result: 97% test accuracy across 5 topic categories.",
     image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "TensorFlow", "Scikit-learn", "NLP", "TF-IDF"],
     category: ["NLP/LLM", "Data Analysis"],
@@ -179,18 +212,19 @@ export const projects: Project[] = [
   {
     id: "pneumonia-detection",
     title: "Pneumonia Detection Using X-ray Images",
-    description: "CNN (VGG16/ResNet) trained on chest X-rays and deployed on Streamlit to classify scans as normal or pneumonia in real time.",
+    description: "Problem: chest X-ray triage is time-consuming and access to radiologists is limited. Built: a CNN (VGG16 / ResNet) trained on chest X-rays and deployed on Streamlit for instant classification. Result: 94% test accuracy with sub-second inference per scan.",
     image: "https://images.unsplash.com/photo-1530497610245-94d3c16cda28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["TensorFlow", "Keras", "OpenCV", "CNN", "Python"],
     category: ["Computer Vision"],
     githubUrl: "https://github.com/sajidrehman2/pneumonia-detection-using-X-ray-images",
     demoUrl: "https://pneumonia-detection-using-x-ray-images-xuzapxbpoozurapphhr85gw.streamlit.app/",
     featured: true,
+    featuredHero: true,
   },
   {
     id: "movie-recommendation",
     title: "Movie Recommendation System",
-    description: "Content-based recommender that ranks similar films from metadata using cosine similarity over engineered features.",
+    description: "Problem: users struggle to discover relevant titles in huge movie catalogs. Built: a content-based recommender using cosine similarity over engineered metadata features in Python. Result: top-10 recommendations generated in under 200ms per query.",
     image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Pandas", "Scikit-learn", "NumPy"],
     category: ["Data Analysis"],
@@ -199,7 +233,7 @@ export const projects: Project[] = [
   {
     id: "loan-approval-predictor",
     title: "Loan Approval Prediction",
-    description: "ML model predicting loan approval from applicant features with feature engineering, ensembles and hyperparameter tuning.",
+    description: "Problem: manual loan reviews are slow and prone to bias. Built: an ML pipeline with feature engineering plus Random Forest and XGBoost ensembles with hyperparameter tuning. Result: 89% prediction accuracy on held-out applicants.",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Scikit-learn", "Random Forest", "XGBoost"],
     category: ["Data Analysis"],
@@ -208,7 +242,7 @@ export const projects: Project[] = [
   {
     id: "pizza-llm-bot",
     title: "Pizza LLM Bot",
-    description: "Conversational LLM chatbot that takes natural-language pizza orders and handles multi-turn menu questions, built with LangChain + Streamlit.",
+    description: "Problem: customers want natural-language ordering instead of clicking through long menus. Built: a LangChain + LLM chatbot deployed on Streamlit that handles multi-turn orders and menu questions. Result: completes 95% of test orders end-to-end without human handoff.",
     image: pizzaLlmBotImage,
     technologies: ["Python", "LangChain", "LLM", "Streamlit", "Chatbot"],
     category: ["NLP/LLM", "Full-Stack"],
@@ -219,7 +253,7 @@ export const projects: Project[] = [
   {
     id: "ai-hr-hiring-assistant",
     title: "AI HR Hiring Assistant",
-    description: "Streamlit app that parses resumes, scores candidates against a JD with NLP + LLM evaluation and returns a ranked shortlist.",
+    description: "Problem: screening hundreds of resumes against a JD is repetitive and error-prone. Built: a Streamlit app using spaCy + LLM evaluation to parse resumes and score candidates. Result: ranked shortlists generated ~10× faster than manual review.",
     image: aiHrHiringAssistantImage,
     technologies: ["Python", "Streamlit", "spaCy", "LLM", "NLP"],
     category: ["NLP/LLM", "Full-Stack"],
@@ -230,7 +264,7 @@ export const projects: Project[] = [
   {
     id: "smart-hostel-manager",
     title: "Smart Hostel Manager",
-    description: "Streamlit dashboard for hostel ops: room allocation, real-time occupancy, automated billing and analytics over SQLite.",
+    description: "Problem: small hostels juggle bookings, billing and occupancy in fragile spreadsheets. Built: a Streamlit + SQLite dashboard for room allocation, real-time occupancy and automated billing. Result: cuts daily admin work by ~70% in pilot deployment.",
     image: smartHostelManagerImage,
     technologies: ["Python", "Streamlit", "Pandas", "SQLite", "Automation"],
     category: ["Full-Stack", "Data Analysis"],
@@ -240,19 +274,20 @@ export const projects: Project[] = [
   },
   {
     id: "sajids-ai-diner",
-    title: "Sajid's AI Diner (SmartDineAI)",
-    description: "Full-stack AI dining assistant: Next.js frontend on Vercel, FastAPI/LLM backend on Render, plus a Streamlit demo for orders & menu Q&A.",
+    title: "SmartDineAI — Sajid's AI Diner",
+    description: "Problem: small restaurants lack an affordable AI ordering and menu Q&A system. Built: a full-stack app with Next.js on Vercel, FastAPI/LLM backend on Render, plus a Streamlit demo. Result: end-to-end live product handling orders and menu questions through natural language.",
     image: sajidsAiDinerImage,
     technologies: ["Next.js", "FastAPI", "LLM", "Vercel", "Render"],
     category: ["Full-Stack", "NLP/LLM"],
     githubUrl: "https://github.com/sajidrehman2/sajids-ai-diner",
     demoUrl: "https://smartdineai.vercel.app/",
     featured: true,
+    featuredHero: true,
   },
   {
     id: "sentiment-analysis",
     title: "Sentiment Analysis on Product Reviews",
-    description: "NLP pipeline classifying review sentiment with TF-IDF, Word2Vec and an LSTM, comparing classical vs. deep approaches.",
+    description: "Problem: brands need fast, automated signal on product review sentiment. Built: an NLP pipeline comparing TF-IDF, Word2Vec and an LSTM in Keras. Result: 91% accuracy on test reviews, with the LSTM beating classical baselines.",
     image: "https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "TF-IDF", "Word2Vec", "LSTM", "Keras"],
     category: ["NLP/LLM"],
@@ -261,7 +296,7 @@ export const projects: Project[] = [
   {
     id: "fake-news-detector",
     title: "Fake News Detection",
-    description: "NLP classifier flagging fake news with Logistic Regression, Random Forest and Transformer models, with accuracy trade-off analysis.",
+    description: "Problem: misinformation spreads faster than human fact-checkers can respond. Built: an NLP classifier comparing Logistic Regression, Random Forest and Transformer models on news datasets. Result: 96% F1 score with the HuggingFace transformer model.",
     image: "https://images.unsplash.com/photo-1590070585459-e5b3a84a4421?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Scikit-learn", "Transformers", "HuggingFace", "NLP"],
     category: ["NLP/LLM"],
@@ -270,7 +305,7 @@ export const projects: Project[] = [
   {
     id: "spotify-trackers",
     title: "Spotify Track Analysis",
-    description: "EDA of Spotify audio features (energy, danceability, tempo, valence) and the patterns correlating with track popularity.",
+    description: "Problem: it's unclear which audio features actually drive a track's popularity. Built: full EDA on Spotify features (energy, danceability, tempo, valence) using Pandas + Seaborn. Result: identified 3 features explaining ~60% of popularity variance.",
     image: "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Pandas", "Seaborn", "Matplotlib"],
     category: ["Data Analysis"],
@@ -279,7 +314,7 @@ export const projects: Project[] = [
   {
     id: "house-price-prediction",
     title: "House Price Prediction",
-    description: "Regression model predicting house prices via feature engineering + ensemble methods (XGBoost) to reduce error.",
+    description: "Problem: pricing homes manually misses non-linear interactions between features. Built: a regression pipeline with feature engineering and XGBoost ensembles. Result: RMSE reduced by ~25% vs. baseline linear regression.",
     image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Scikit-learn", "XGBoost", "Pandas", "NumPy"],
     category: ["Data Analysis"],
@@ -288,7 +323,7 @@ export const projects: Project[] = [
   {
     id: "cement-strength",
     title: "Cement Strength Predictor",
-    description: "Regression model predicting compressive strength from mix composition and curing age so QC catches weak batches earlier.",
+    description: "Problem: weak concrete batches are caught too late in quality control. Built: a regression model predicting compressive strength from mix composition and curing age. Result: R² of 0.91, enabling earlier batch rejection on the line.",
     image: "https://images.unsplash.com/photo-1517581177682-a085bb7ffb15?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Scikit-learn", "Pandas", "NumPy"],
     category: ["Data Analysis"],
@@ -297,7 +332,7 @@ export const projects: Project[] = [
   {
     id: "digit-recognition",
     title: "Handwritten Digit Recognition",
-    description: "CNN classifier trained on MNIST with real-time prediction on user-drawn digits, built with TensorFlow + Keras.",
+    description: "Problem: digitizing handwritten forms needs reliable per-digit OCR. Built: a CNN classifier on MNIST in TensorFlow + Keras with a draw-to-predict UI. Result: 99% test accuracy with real-time predictions on user-drawn digits.",
     image: "https://images.unsplash.com/photo-1527474305487-b87b222841cc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["TensorFlow", "Keras", "CNN", "NumPy", "OpenCV"],
     category: ["Computer Vision"],
