@@ -64,60 +64,7 @@ const Projects = () => {
               className={`opacity-0 ${isVisible ? 'animate-fade-in' : ''} h-full`}
               style={{ animationDelay: `${200 + (index % 6) * 80}ms` }}
             >
-              <article className="group h-full flex flex-col bg-secondary/30 border border-white/10 rounded-lg overflow-hidden transition-all hover:-translate-y-1 hover:shadow-xl hover:border-primary/40">
-                {/* 16:9 thumbnail */}
-                <div className="relative w-full aspect-video overflow-hidden bg-secondary">
-                  <ProjectThumb src={project.image} alt={project.title} title={project.title} />
-                  {project.featured && (
-                    <div className="absolute top-3 left-3 px-2.5 py-1 bg-primary text-primary-foreground text-xs font-medium rounded-full z-20">
-                      Featured
-                    </div>
-                  )}
-                </div>
-
-                <div className="p-5 flex flex-col flex-1">
-                  <h3 className="text-lg font-bold mb-2 group-hover:text-primary transition-colors line-clamp-2 min-h-[3.5rem]">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-foreground/70 mb-4 line-clamp-2 min-h-[2.5rem]">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-1.5 mb-4">
-                    {project.technologies.slice(0, 5).map((tech, i) => (
-                      <span key={i} className="px-2 py-0.5 bg-primary/10 text-primary text-xs rounded-full border border-primary/20">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-auto flex items-center gap-2 pt-3 border-t border-white/5">
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-secondary text-foreground/80 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
-                        aria-label={`View ${project.title} on GitHub`}
-                        title="GitHub"
-                      >
-                        <Github size={18} />
-                      </a>
-                    )}
-                    {project.demoUrl && (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-secondary text-foreground/80 rounded-md hover:bg-primary hover:text-primary-foreground transition-colors"
-                        aria-label={`View ${project.title} live demo`}
-                        title="Live Demo"
-                      >
-                        <ExternalLink size={18} />
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </article>
+              <ProjectCard project={project} />
             </div>
           ))}
         </div>
