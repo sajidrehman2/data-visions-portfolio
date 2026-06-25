@@ -120,11 +120,15 @@ const About = () => {
                 <div className="flex flex-col md:flex-row gap-8 items-start">
                   <div className="flex-shrink-0 mx-auto md:mx-0">
                     <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-primary/40 ring-4 ring-primary/10 shadow-[0_0_40px_-10px_hsl(var(--primary)/0.5)]">
-                      {/* Replace this src with your actual photo URL */}
                       <img
                         alt={personalInfo.name}
                         className="w-full h-full object-cover"
-                        src="https://ui-avatars.com/api/?name=Sajid+Rehman&size=300&background=3B82F6&color=fff&bold=true"
+                        src="/lovable-uploads/84173685-acc4-4fa5-8b0f-ede1a61c4fa1.jpg"
+                        onError={(e) => {
+                          const t = e.currentTarget;
+                          t.style.display = 'none';
+                          t.parentElement!.innerHTML = `<div class="w-full h-full flex items-center justify-center bg-secondary text-3xl font-bold text-primary">SR</div>`;
+                        }}
                       />
                     </div>
                   </div>

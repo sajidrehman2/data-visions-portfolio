@@ -2,54 +2,50 @@ import { useState, useEffect } from "react";
 import { navItems } from "@/data";
 import { Menu, X, Download } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
-import { handleCvDownload } from "@/utils/downloadUtils";
+import { handleResumeDownload } from "@/utils/downloadUtils";
 import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
-  const [activeSection, setActiveSection] = useState<string>("home");
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollPosition(window.scrollY);
-
-      // Determine which section is currently in view
-      const sectionIds = navItems
-        .map((n) => n.href)
-        .filter((h) => h.startsWith("#"))
-        .map((h) => h.slice(1));
-      let current = sectionIds[0] ?? "home";
-      for (const id of sectionIds) {
-        const el = document.getElementById(id);
-        if (!el) continue;
-        const top = el.getBoundingClientRect().top;
-        if (top <= 120) current = id;
-      }
-      setActiveSection(current);
     };
 
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const isScrolled = scrollPosition > 50;
 
+  // Close mobile menu when clicking on a link
   const handleNavItemClick = () => {
-    if (isMenuOpen) setIsMenuOpen(false);
+    if (isMenuOpen) {
+      setIsMenuOpen(false);
+    }
   };
 
-  const handleCvClick = (e: React.MouseEvent) => {
+  const handleResumeDownloadClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    const result = handleCvDownload();
-    toast({
-      title: result.success ? "CV download started" : "Download failed",
-      description: result.message,
-      variant: result.success ? undefined : "destructive",
-    });
+    
+    const result = handleResumeDownload();
+    
+    if (result.success) {
+      toast({
+        title: "Resume download started",
+        description: result.message,
+      });
+    } else {
+      toast({
+        title: "Download failed",
+        description: result.message,
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -61,8 +57,8 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <Link
-          to="/"
+        <Link 
+          to="/" 
           className="text-xl font-bold tracking-tight text-gradient"
           aria-label="Sajid Rehman - AI Engineer & Data Scientist"
         >
@@ -71,29 +67,33 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex items-center space-x-8">
-            {navItems.map((item) => {
-              const isActive = item.href === `#${activeSection}`;
-              return (
-                <li key={item.name}>
+          <ul className="flex space-x-8">
+            {navItems.map((item) => (
+              <li key={item.name}>
+                {item.href.startsWith('/') ? (
+                  <Link
+                    to={item.href}
+                    className="text-sm font-medium link-underline text-foreground/80 hover:text-foreground transition-colors"
+                  >
+                    {item.name}
+                  </Link>
+                ) : (
                   <a
                     href={item.href}
-                    className={`text-sm font-medium link-underline transition-colors ${
-                      isActive ? "text-primary" : "text-foreground/80 hover:text-foreground"
-                    }`}
+                    className="text-sm font-medium link-underline text-foreground/80 hover:text-foreground transition-colors"
                   >
                     {item.name}
                   </a>
-                </li>
-              );
-            })}
+                )}
+              </li>
+            ))}
             <li>
               <a
                 href="#"
-                onClick={handleCvClick}
-                className="text-sm font-medium px-4 py-2 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors flex items-center gap-1"
+                className="text-sm font-medium px-4 py-2 rounded-md bg-primary/20 hover:bg-primary/30 text-primary transition-colors flex items-center gap-1"
+                onClick={handleResumeDownloadClick}
               >
-                <Download size={16} /> Download CV
+                <Download size={16} /> Resume
               </a>
             </li>
           </ul>
@@ -116,27 +116,33 @@ const Header = () => {
         }`}
       >
         <div className="flex flex-col h-full justify-center items-center space-y-8 p-8">
-          {navItems.map((item) => {
-            const isActive = item.href === `#${activeSection}`;
-            return (
+          {navItems.map((item) => (
+            item.href.startsWith('/') ? (
+              <Link
+                key={item.name}
+                to={item.href}
+                className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
+                onClick={handleNavItemClick}
+              >
+                {item.name}
+              </Link>
+            ) : (
               <a
                 key={item.name}
                 href={item.href}
-                className={`text-2xl font-medium transition-colors ${
-                  isActive ? "text-primary" : "text-foreground hover:text-primary"
-                }`}
+                className="text-2xl font-medium text-foreground hover:text-primary transition-colors"
                 onClick={handleNavItemClick}
               >
                 {item.name}
               </a>
-            );
-          })}
+            )
+          ))}
           <a
             href="#"
             className="text-xl font-medium mt-4 px-6 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors flex items-center gap-2"
             onClick={(e) => {
               handleNavItemClick();
-              handleCvClick(e);
+              handleResumeDownloadClick(e);
             }}
           >
             <Download size={18} />
