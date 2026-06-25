@@ -1,28 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { projects, projectCategories } from '@/data';
 import type { ProjectCategory } from '@/types';
-import { Github, ExternalLink, Image as ImageIcon } from 'lucide-react';
-
-const ProjectThumb = ({ src, alt, title }: { src: string; alt: string; title: string }) => {
-  const [failed, setFailed] = useState(false);
-  if (failed || !src) {
-    return (
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-secondary to-background text-center p-6">
-        <ImageIcon className="text-primary/60 mb-3" size={36} />
-        <span className="text-sm font-semibold text-foreground/90 line-clamp-3">{title}</span>
-      </div>
-    );
-  }
-  return (
-    <img
-      src={src}
-      alt={alt}
-      loading="lazy"
-      onError={() => setFailed(true)}
-      className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-    />
-  );
-};
+import ProjectCard from '@/components/ProjectCard';
 
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState<ProjectCategory>("All");
