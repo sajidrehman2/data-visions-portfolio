@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Stats from '@/components/Stats';
 import About from '@/components/About';
 import Skills from '@/components/Skills';
 import FeaturedProjects from '@/components/FeaturedProjects';
