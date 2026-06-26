@@ -14,7 +14,7 @@ const stats = [
   },
   {
     icon: GraduationCap,
-    label: 'BS IT',
+    label: 'Bachelor of IT',
     sub: 'Final Year Student',
   },
   {
