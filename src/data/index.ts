@@ -318,7 +318,7 @@ export const personalInfo = {
   name: "Sajid Rehman",
   title: "AI & Data Science Engineer",
   headline: "AI & Data Science Engineer | Building intelligent systems with Python, LLMs & Computer Vision",
-  subtitle: "BS IT Student @ University of Agriculture Peshawar | 16+ Projects | Available for Freelance & Internships",
+  subtitle: "Bachelor of IT Student @ University of Agriculture Peshawar | 16+ Projects | Available for Freelance & Internships",
   tagline: "Building intelligent systems with Python, LLMs & Computer Vision",
   email: "sajid.rehmanoffical95001@gmail.com",
   phone: "+923038047795",
