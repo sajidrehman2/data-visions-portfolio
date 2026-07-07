@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { navItems } from "@/data";
 import { Menu, X, Download } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
-import { handleResumeDownload } from "@/utils/downloadUtils";
+import { handleCvDownload, handleResumeDownload } from "@/utils/downloadUtils";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -37,6 +37,25 @@ const Header = () => {
     if (result.success) {
       toast({
         title: "Resume download started",
+        description: result.message,
+      });
+    } else {
+      toast({
+        title: "Download failed",
+        description: result.message,
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleCvDownloadClick = async (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    const result = await handleCvDownload();
+
+    if (result.success) {
+      toast({
+        title: "CV download started",
         description: result.message,
       });
     } else {
@@ -142,7 +161,7 @@ const Header = () => {
             className="text-xl font-medium mt-4 px-6 py-3 rounded-md bg-primary text-primary-foreground hover:bg-primary/90 transition-colors flex items-center gap-2"
             onClick={(e) => {
               handleNavItemClick();
-              handleResumeDownloadClick(e);
+              handleCvDownloadClick(e);
             }}
           >
             <Download size={18} />
