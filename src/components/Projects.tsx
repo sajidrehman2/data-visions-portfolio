@@ -34,8 +34,8 @@ const Projects = () => {
         <div className={`opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}>
           <div className="max-w-xl mx-auto text-center mb-12">
             <div className="inline-block px-3 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">My Work</div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
-            <p className="text-foreground/70">A showcase of my AI, ML and full-stack data projects with real deployments.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">All Projects</h2>
+            <p className="text-foreground/70">Browse my complete portfolio of AI, ML and full-stack data projects.</p>
           </div>
         </div>
 
