@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from 'react';
 import { personalInfo, socialLinks } from '@/data';
 import { Mail, Send, Github, Linkedin, Twitter, BarChart } from 'lucide-react';
 import { useToast } from "@/hooks/use-toast";
+import { handleCvDownload, handleResumeDownload } from '@/utils/downloadUtils';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -51,6 +52,21 @@ const Contact = () => {
       setMessage('');
       setIsSubmitting(false);
     }, 1500);
+  };
+
+  const handleDownloadClick = async (
+    e: React.MouseEvent,
+    downloadFn: () => Promise<{ success: boolean; message: string }>,
+    label: string,
+  ) => {
+    e.preventDefault();
+    const result = await downloadFn();
+
+    toast({
+      title: result.success ? `${label} download started` : 'Download failed',
+      description: result.message,
+      variant: result.success ? undefined : 'destructive',
+    });
   };
 
   const getIconComponent = (iconName: string) => {
@@ -240,9 +256,9 @@ const Contact = () => {
 
                 <div className="mt-8 flex flex-wrap gap-3 justify-center">
                   <a
-                    href={personalInfo.cvUrl}
+                    href="#"
                     className="flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full hover:bg-primary/90 transition-colors text-sm font-medium"
-                    download
+                    onClick={(e) => handleDownloadClick(e, handleCvDownload, 'CV')}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -252,9 +268,9 @@ const Contact = () => {
                     Download CV
                   </a>
                   <a
-                    href={personalInfo.resumeUrl}
+                    href="#"
                     className="flex items-center gap-2 px-5 py-2.5 bg-primary/10 text-primary rounded-full hover:bg-primary/20 transition-colors text-sm font-medium border border-primary/30"
-                    download
+                    onClick={(e) => handleDownloadClick(e, handleResumeDownload, 'Resume')}
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>

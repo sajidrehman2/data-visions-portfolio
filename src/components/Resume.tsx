@@ -2,23 +2,19 @@ import React from 'react';
 import { Download } from 'lucide-react';
 import { Button } from './ui/button';
 import { useToast } from '@/hooks/use-toast';
+import { handleResumeDownload } from '@/utils/downloadUtils';
 
 const Resume = () => {
   const { toast } = useToast();
   const resumeImageUrl = '/lovable-uploads/d05b1788-b238-4c4e-9926-c6ca14a71ace.png';
-  const pdfUrl = '/Sajid_Rehman_Resume.pdf';
 
-  const handleDownload = () => {
-    const link = document.createElement('a');
-    link.href = pdfUrl;
-    link.download = 'Sajid_Rehman_Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
+  const handleDownload = async () => {
+    const result = await handleResumeDownload();
+
     toast({
-      title: "Download started",
-      description: "Your resume PDF is being downloaded.",
+      title: result.success ? "Resume download started" : "Download failed",
+      description: result.message,
+      variant: result.success ? undefined : "destructive",
     });
   };
 

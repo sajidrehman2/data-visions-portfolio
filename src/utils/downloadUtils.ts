@@ -1,30 +1,33 @@
-/**
- * Utility functions for handling file downloads.
- *
- * We fetch the file as a blob and trigger the download from an object URL so
- * the browser never navigates the top window to the PDF. This avoids the
- * Lovable preview iframe showing a "Sign in to continue" screen when the
- * asset URL is opened directly.
- */
-
-const downloadFromUrl = async (url: string, filename: string) => {
-  const response = await fetch(url, { credentials: 'omit' });
-  if (!response.ok) {
-    throw new Error(`Failed to fetch ${url}: ${response.status}`);
-  }
-  const blob = await response.blob();
-  const objectUrl = URL.createObjectURL(blob);
-
+const startDownload = (url: string, filename: string) => {
   const link = document.createElement('a');
-  link.href = objectUrl;
+  link.href = url;
   link.download = filename;
   link.rel = 'noopener';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
+};
 
-  // Release the object URL on the next tick.
-  setTimeout(() => URL.revokeObjectURL(objectUrl), 0);
+const downloadFromUrl = (url: string, filename: string) => {
+  return new Promise<void>((resolve, reject) => {
+    const request = new XMLHttpRequest();
+
+    request.open('GET', url, true);
+    request.responseType = 'blob';
+    request.onload = () => {
+      if (request.status < 200 || request.status >= 300) {
+        reject(new Error(`Failed to load ${url}: ${request.status}`));
+        return;
+      }
+
+      const objectUrl = URL.createObjectURL(request.response);
+      startDownload(objectUrl, filename);
+      setTimeout(() => URL.revokeObjectURL(objectUrl), 0);
+      resolve();
+    };
+    request.onerror = () => reject(new Error(`Failed to load ${url}`));
+    request.send();
+  });
 };
 
 export const handleResumeDownload = async () => {
