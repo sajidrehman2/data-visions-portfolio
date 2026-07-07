@@ -29,11 +29,11 @@ const Header = () => {
     }
   };
 
-  const handleResumeDownloadClick = (e: React.MouseEvent) => {
+  const handleResumeDownloadClick = async (e: React.MouseEvent) => {
     e.preventDefault();
-    
-    const result = handleResumeDownload();
-    
+
+    const result = await handleResumeDownload();
+
     if (result.success) {
       toast({
         title: "Resume download started",
