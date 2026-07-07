@@ -25,9 +25,13 @@ const Hero = () => {
     document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const handleDownload = (e: React.MouseEvent, fn: () => { success: boolean; message: string }, label: string) => {
+  const handleDownload = async (
+    e: React.MouseEvent,
+    fn: () => Promise<{ success: boolean; message: string }>,
+    label: string,
+  ) => {
     e.preventDefault();
-    const result = fn();
+    const result = await fn();
     toast({
       title: result.success ? `${label} download started` : "Download failed",
       description: result.message,
