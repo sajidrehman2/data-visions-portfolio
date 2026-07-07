@@ -26,8 +26,9 @@ const NotFound = () => {
     navigate("/");
   };
 
-  const handleResumeDownloadClick = () => {
-    const result = handleResumeDownload();
+  const handleResumeDownloadClick = async () => {
+    const result = await handleResumeDownload();
+    
     
     if (result.success) {
       toast({
