@@ -3,7 +3,7 @@ import cvPdfUrl from '@/assets/Sajid_Rehman_CV.pdf?url';
 
 const startDownload = (url: string, filename: string) => {
   const link = document.createElement('a');
-  link.href = objectUrl;
+  link.href = url;
   link.download = filename;
   link.rel = 'noopener';
   document.body.appendChild(link);
@@ -11,7 +11,7 @@ const startDownload = (url: string, filename: string) => {
   document.body.removeChild(link);
 };
 
-export const handleResumeDownload = () => {
+export const handleResumeDownload = async () => {
   try {
     startDownload(resumePdfUrl, 'Sajid_Rehman_Resume.pdf');
     return { success: true, message: 'Your resume PDF download has started.' };
@@ -21,7 +21,7 @@ export const handleResumeDownload = () => {
   }
 };
 
-export const handleCvDownload = () => {
+export const handleCvDownload = async () => {
   try {
     startDownload(cvPdfUrl, 'Sajid_Rehman_CV.pdf');
     return { success: true, message: 'Your CV PDF download has started.' };
