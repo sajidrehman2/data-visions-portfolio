@@ -15,6 +15,7 @@ import pizzaLlmBotImage from "@/assets/pizza-llm-bot.jpg";
 import aiHrHiringAssistantImage from "@/assets/ai-hr-hiring-assistant.jpg";
 import smartHostelManagerImage from "@/assets/smart-hostel-manager.jpg";
 import sajidsAiDinerImage from "@/assets/sajids-ai-diner.jpg";
+import fakeNewsDetectorImage from "@/assets/fake-news-detector.jpg";
 
 export const navItems: NavItem[] = [
   { name: "Home", href: "#home" },
