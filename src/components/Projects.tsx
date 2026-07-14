@@ -40,7 +40,7 @@ const Projects = () => {
         </div>
 
         {/* Filter bar */}
-        <div className={`flex flex-wrap justify-center gap-2 mb-12 opacity-0 ${isVisible ? 'animate-fade-in animate-delay-100' : ''}`}>
+        <div className={`flex flex-wrap justify-center gap-2 mb-12 ${isVisible ? 'animate-fade-in animate-delay-100' : ''}`}>
           {projectCategories.map((category) => (
             <button
               key={category}
