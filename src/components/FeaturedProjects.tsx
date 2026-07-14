@@ -48,7 +48,7 @@ const FeaturedProjects = () => {
           {featuredProjects.map((project, index) => (
             <div
               key={project.id}
-              className={`opacity-0 ${isVisible ? 'animate-fade-in' : ''} h-full`}
+              className={`h-full ${isVisible ? 'animate-fade-in' : ''}`}
               style={{ animationDelay: `${200 + index * 80}ms` }}
             >
               <ProjectCard project={project} forceFeatured />
