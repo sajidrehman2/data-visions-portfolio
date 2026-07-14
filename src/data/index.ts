@@ -263,7 +263,7 @@ export const projects: Project[] = [
     id: "fake-news-detector",
     title: "Fake News Detection",
     description: "NLP classifier flagging fake news with Logistic Regression, Random Forest and Transformer models, with accuracy trade-off analysis.",
-    image: "https://images.unsplash.com/photo-1590070585459-e5b3a84a4421?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image: fakeNewsDetectorImage,
     technologies: ["Python", "Scikit-learn", "Transformers", "HuggingFace", "NLP"],
     category: ["NLP/LLM"],
     githubUrl: "",
