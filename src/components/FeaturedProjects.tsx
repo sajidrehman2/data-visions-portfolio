@@ -34,7 +34,7 @@ const FeaturedProjects = () => {
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-secondary/5 z-0"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className={`opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}>
+        <div className={isVisible ? 'animate-fade-in' : ''}>
           <div className="max-w-xl mx-auto text-center mb-12">
             <div className="inline-block px-3 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">
               Featured
