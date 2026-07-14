@@ -31,7 +31,7 @@ const Projects = () => {
       <div className="absolute inset-0 bg-gradient-to-tl from-transparent to-secondary/5 z-0"></div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className={`opacity-0 ${isVisible ? 'animate-fade-in' : ''}`}>
+        <div className={isVisible ? 'animate-fade-in' : ''}>
           <div className="max-w-xl mx-auto text-center mb-12">
             <div className="inline-block px-3 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium mb-4">My Work</div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">All Projects</h2>
@@ -40,7 +40,7 @@ const Projects = () => {
         </div>
 
         {/* Filter bar */}
-        <div className={`flex flex-wrap justify-center gap-2 mb-12 opacity-0 ${isVisible ? 'animate-fade-in animate-delay-100' : ''}`}>
+        <div className={`flex flex-wrap justify-center gap-2 mb-12 ${isVisible ? 'animate-fade-in animate-delay-100' : ''}`}>
           {projectCategories.map((category) => (
             <button
               key={category}
