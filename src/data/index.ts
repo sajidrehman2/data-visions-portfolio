@@ -15,7 +15,6 @@ import pizzaLlmBotImage from "@/assets/pizza-llm-bot.jpg";
 import aiHrHiringAssistantImage from "@/assets/ai-hr-hiring-assistant.jpg";
 import smartHostelManagerImage from "@/assets/smart-hostel-manager.jpg";
 import sajidsAiDinerImage from "@/assets/sajids-ai-diner.jpg";
-import fakeNewsDetectorImage from "@/assets/fake-news-detector.jpg";
 
 export const navItems: NavItem[] = [
   { name: "Home", href: "#home" },
@@ -249,24 +248,6 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/sajidrehman2/sajids-ai-diner",
     demoUrl: "https://smartdineai.vercel.app/",
     featured: true,
-  },
-  {
-    id: "sentiment-analysis",
-    title: "Sentiment Analysis on Product Reviews",
-    description: "NLP pipeline classifying review sentiment with TF-IDF, Word2Vec and an LSTM, comparing classical vs. deep approaches.",
-    image: "https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    technologies: ["Python", "TF-IDF", "Word2Vec", "LSTM", "Keras"],
-    category: ["NLP/LLM"],
-    githubUrl: "",
-  },
-  {
-    id: "fake-news-detector",
-    title: "Fake News Detection",
-    description: "NLP classifier flagging fake news with Logistic Regression, Random Forest and Transformer models, with accuracy trade-off analysis.",
-    image: fakeNewsDetectorImage,
-    technologies: ["Python", "Scikit-learn", "Transformers", "HuggingFace", "NLP"],
-    category: ["NLP/LLM"],
-    githubUrl: "",
   },
   {
     id: "spotify-trackers",
