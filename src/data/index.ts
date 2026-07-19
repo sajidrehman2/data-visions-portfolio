@@ -256,7 +256,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1611339555312-e607c8352fd7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Pandas", "Seaborn", "Matplotlib"],
     category: ["Data Analysis"],
-    githubUrl: "https://github.com/sajidrehman2/Data-science-and-Machine-learning-project/tree/main/Project%20of%20Spotify%20Trackers",
+    githubUrl: "https://github.com/sajidrehman2/spotify-track-popularity-prediction",
   },
   {
     id: "house-price-prediction",
@@ -265,7 +265,7 @@ export const projects: Project[] = [
     image: "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     technologies: ["Python", "Scikit-learn", "XGBoost", "Pandas", "NumPy"],
     category: ["Data Analysis"],
-    githubUrl: "https://github.com/sajidrehman2/Data-science-and-Machine-learning-project/tree/main/HousePrice%20Prediction",
+    githubUrl: "https://github.com/sajidrehman2/house-price-prediction",
   },
   {
     id: "cement-strength",
