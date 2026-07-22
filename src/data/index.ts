@@ -28,21 +28,21 @@ export const education: Education[] = [
   {
     degree: "Bachelors Information Technology",
     institution: "Agriculture university Peshawar",
-    location: "Peshawar, Pakistan",
+    location: "Lahore, Pakistan",
     duration: "Nov 2022 - Present",
     description: "Currently pursuing a bachelor's degree in Information Technology.",
   },
   {
     degree: "Diploma of Information Technology",
     institution: "National college of Management Science",
-    location: "Peshawar, Pakistan",
+    location: "Lahore, Pakistan",
     duration: "Jan 2023 - Jan 2024",
     description: "Completed diploma program covering core IT concepts and technologies."
   },
   {
     degree: "Python for Data science and AI",
     institution: "Saylani Trust SMIT",
-    location: "Peshawar, Pakistan",
+    location: "Lahore, Pakistan",
     duration: "Jan 2024 - Present",
     description: "Specialized training in Python programming for data science and artificial intelligence applications."
   }
@@ -52,7 +52,7 @@ export const experiences: Experience[] = [
   {
     title: "AI Engineer",
     company: "Saylani Welfare Trust",
-    location: "Peshawar, Pakistan",
+    location: "Lahore, Pakistan",
     duration: "Jan 2023 - Aug 2024",
     description: "Designed and implemented machine learning algorithms for natural language processing tasks, enhancing text analysis and automation. Developed AI models for image recognition and object detection, improving accuracy and efficiency in visual data processing.",
     technologies: ["Python", "TensorFlow", "PyTorch", "NLP", "Computer Vision"],
@@ -60,7 +60,7 @@ export const experiences: Experience[] = [
   {
     title: "Data Science",
     company: "Code Alpha",
-    location: "Peshawar, Pakistan",
+    location: "Lahore, Pakistan",
     duration: "Jan 2024 - Aug 2024",
     description: "Assisting in the development and optimization of AI/ML models for real-world applications. Working with large-scale datasets and implementing deep learning and NLP techniques to support AI solutions.",
     technologies: ["Python", "Machine Learning", "Deep Learning", "NLP", "Data Analysis"],
@@ -68,7 +68,7 @@ export const experiences: Experience[] = [
   {
     title: "Python for Data Science and AI – Trainee",
     company: "Saylani Trust (SMIT)",
-    location: "Peshawar, Pakistan",
+    location: "Lahore, Pakistan",
     duration: "Jan 2023 - Jan 2025",
     description: "Enhancing skills in Python programming for data science and AI. Hands-on experience in data manipulation, visualization, machine learning, and AI techniques through practical projects.",
     technologies: ["Python", "Data Science", "Machine Learning", "AI", "Data Visualization"],
@@ -291,7 +291,7 @@ export const socialLinks: SocialLink[] = [
   { name: "GitHub", url: "https://github.com/sajidrehman2", icon: "github" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/sajid-rehman-b14474265/", icon: "linkedin" },
   { name: "Kaggle", url: "https://www.kaggle.com/itsajidrehman", icon: "bar-chart" },
-  { name: "Email", url: "mailto:sajid.rehmanoffical95001@gmail.com", icon: "mail" },
+  { name: "Email", url: "mailto:sajidkhan47795@gmail.com", icon: "mail" },
 ];
 
 export const testimonials: Testimonial[] = [];
@@ -302,10 +302,10 @@ export const personalInfo = {
   headline: "AI & Data Science Engineer | Building intelligent systems with Python, LLMs & Computer Vision",
   subtitle: "Bachelor of IT Student @ University of Agriculture Peshawar | 16+ Projects | Available for Freelance & Internships",
   tagline: "Building intelligent systems with Python, LLMs & Computer Vision",
-  email: "sajid.rehmanoffical95001@gmail.com",
+  email: "sajidkhan47795@gmail.com",
   phone: "+923038047795",
-  location: "Peshawar, Pakistan",
-  bio: `AI & Data Science Engineer based in Peshawar, Pakistan, with 2+ years building ML, deep learning and LLM-powered products. Currently finishing my BS in IT at the University of Agriculture Peshawar while shipping 16+ end-to-end projects across computer vision, NLP and full-stack AI. I focus on practical, deployable systems — from CNN medical imaging to LangChain chatbots and FastAPI services.`,
+  location: "Lahore, Pakistan",
+  bio: `Final-year BS Information Technology student who has independently built and shipped 8+ AI/ML projects spanning Computer Vision, NLP, and Generative AI — including real-time YOLOv8 object detection, VGG16/ResNet medical-imaging classifiers, and LangChain/GPT-4 RAG applications, all documented on GitHub with live demos. Combines coursework with freelance client work and an AI training program to apply concepts in real, deployed systems. Completed the Stanford/DeepLearning.AI Machine Learning and Deep Learning Specializations. Seeking an entry-level AI/ML Engineer, Computer Vision, or NLP internship/role.`,
   resumeUrl: "/Sajid_Rehman_Resume.pdf",
   cvUrl: "/Sajid_Rehman_CV.pdf",
 };
