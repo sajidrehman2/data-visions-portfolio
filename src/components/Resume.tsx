@@ -6,7 +6,7 @@ import { handleResumeDownload } from '@/utils/downloadUtils';
 
 const Resume = () => {
   const { toast } = useToast();
-  const resumeImageUrl = '/lovable-uploads/resume-preview.png';
+  const resumePdfUrl = '/Sajid_Rehman_CV.pdf';
 
   const handleDownload = async () => {
     const result = await handleResumeDownload();
@@ -24,15 +24,30 @@ const Resume = () => {
         <h2 className="text-3xl font-bold text-center mb-8">My Resume</h2>
         
         <div className="bg-card rounded-lg p-6 shadow-lg border border-border/50">
-          {/* Resume Image Display */}
+          {/* Resume PDF Preview (all pages, scrollable) */}
           <div className="mb-6">
-            <div className="relative mx-auto max-w-3xl">
-              <img
-                src={resumeImageUrl}
-                alt="Sajid Rehman's Resume"
-                className="w-full h-auto rounded-lg shadow-md border border-border/20"
-                style={{ maxHeight: '1200px', objectFit: 'contain' }}
-              />
+            <div className="relative mx-auto max-w-3xl rounded-lg overflow-hidden shadow-md border border-border/20 bg-background">
+              <object
+                data={`${resumePdfUrl}#view=FitH&toolbar=1`}
+                type="application/pdf"
+                className="w-full"
+                style={{ height: '85vh', minHeight: '600px' }}
+                aria-label="Sajid Rehman's Resume PDF"
+              >
+                <iframe
+                  src={`${resumePdfUrl}#view=FitH&toolbar=1`}
+                  title="Sajid Rehman's Resume PDF"
+                  className="w-full"
+                  style={{ height: '85vh', minHeight: '600px', border: 0 }}
+                />
+                <div className="p-6 text-center text-sm text-muted-foreground">
+                  Your browser can't display the PDF inline.{' '}
+                  <a href={resumePdfUrl} target="_blank" rel="noopener noreferrer" className="underline">
+                    Open the resume in a new tab
+                  </a>
+                  .
+                </div>
+              </object>
             </div>
           </div>
           
