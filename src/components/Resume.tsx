@@ -6,7 +6,7 @@ import { handleResumeDownload } from '@/utils/downloadUtils';
 
 const Resume = () => {
   const { toast } = useToast();
-  const resumeImageUrl = '/lovable-uploads/d05b1788-b238-4c4e-9926-c6ca14a71ace.png';
+  const resumeImageUrl = '/lovable-uploads/resume-preview.png';
 
   const handleDownload = async () => {
     const result = await handleResumeDownload();
