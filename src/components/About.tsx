@@ -142,7 +142,7 @@ const About = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {[
                     { label: "16+ Projects", sub: "Shipped end-to-end" },
-                    { label: "2+ Years Experience", sub: "ML / DL / NLP" },
+                    { label: "15+ Projects Shipped", sub: "ML / DL / NLP" },
                     { label: "Bachelor of IT Final Year", sub: "Univ. of Agriculture Peshawar" },
                   ].map((stat) => (
                     <div key={stat.label} className="bg-secondary/30 border border-primary/20 rounded-lg p-5 text-center hover:border-primary/50 transition-colors">
